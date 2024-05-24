@@ -28,7 +28,7 @@
 
 .tooltipTable {
   font-family: Open Sans,Helvetica,Arial,sans-serif;
-  border: 0px;
+  border: 10px;
   border-collapse: collapse;
   table-layout: auto;
 }
@@ -54,7 +54,7 @@
 }
 
 th.headerCell {
-  background-color: #ccd8e4;
+  background-color: red;
   padding: 5px;
   border-bottom: 1px solid #BDC3C7;
 }
