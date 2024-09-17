@@ -93,27 +93,16 @@ table.reportTable tr:hover td {
   background-color: royalblue !important; /* Royal blue background when hovering over the row */
 }
 
-/* Spaltenhover: Überdeckt die alternierenden Hintergrundfarben */
+/* Spaltenhover: Überdeckt die alternierenden Hintergrundfarben und synchronisiert den Header */
 table.reportTable td:hover,
 table.reportTable td:hover ~ td {
   background-color: royalblue !important; /* Royal blue for column hover, with higher priority */
 }
 
-/* Synchronize header hover with column hover */
-table.reportTable td:hover,
-table.reportTable td:hover ~ td {
-  background-color: royalblue !important; /* Royal blue for the cells in the column */
-}
-
-/* Apply hover effect to the header of the column */
-table.reportTable td:hover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: royalblue !important; /* Applies royal blue to the header */
+/* Applies hover effect to the header when a column is hovered */
+table.reportTable td:hover::before,
+table.reportTable th:hover {
+  background-color: royalblue !important; /* Royal blue for the header of the hovered column */
 }
 
 /* Special class for header cells with specific styles */
