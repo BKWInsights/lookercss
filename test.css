@@ -14,7 +14,7 @@
   width: auto;
   height: auto;
   padding: 5px;
-  background-color: white;
+  background-color: #ffcccc; /* Light red */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -32,14 +32,17 @@
   border: 0px;
   border-collapse: collapse;
   table-layout: auto;
+  background-color: #ffffcc; /* Light yellow */
 }
 
 .focus {
   font-weight: bold;
+  background-color: #ccffcc; /* Light green */
 }
 
 .hidden {
   display: none;
+  background-color: #ccccff; /* Light purple */
 }
 
 .hover {
@@ -53,6 +56,7 @@
   border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
+  background-color: #cceeff; /* Light blue */
 }
 
 th.headerCell {
@@ -82,71 +86,84 @@ th.headerCell {
 }
 
 .headerCell.transposed.dimension {
-  background-color: #e4ecf3;
+  background-color: #ffcc99; /* Light orange */
 }
 
 .headerCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
+  background-color: #ff9966 !important; /* Darker orange */
 }
 
-/* Alternating row colors for measure rows */
-.reportTable tr:nth-child(odd) .rowCell.measure {
-  background-color: #f9f9f9;
+.rowCell {
+  vertical-align: super;
+  padding-left: 5px;
+  border-bottom: 1px solid #bdc3c7;
+  background-color: #e6ffcc; /* Light green */
 }
 
-.reportTable tr:nth-child(even) .rowCell.measure {
-  background-color: #e4d0bd;
+.rowCell.merged {
+  background-color: #ccffcc !important; /* Light green */
 }
 
-/* Ensure merged cells still alternate */
-.rowCell.merged.measure:nth-child(odd) {
-  background-color: #f9f9f9 !important;
+.indexCell.transposed {
+  font-weight: bold;
+  background-color: #ffcccc; /* Light red */
 }
 
-.rowCell.merged.measure:nth-child(even) {
-  background-color: #e4d0bd !important;
+.indexCell.transposed.pivot {
+  background-color: #ffcc99; /* Light orange */
 }
 
-/* Hover effect */
-.rowCell.measure:hover {
-  background-color: #ffffbb !important;
+.indexCell.transposed.dimension {
+  background-color: #ffcc66; /* Light orange */
 }
 
-/* For transposed tables, alternate measure rows */
-.indexCell.transposed.measure:nth-child(odd) {
-  background-color: #f9f9f9;
+.indexCell.transposed.measure {
+  background-color: #e4d0bd; /* Beige */
 }
 
-.indexCell.transposed.measure:nth-child(even) {
-  background-color: #e4d0bd;
+.indexCell.transposed.calculation {
+  background-color: #c9dfc5; /* Light green */
 }
 
-.indexCell.transposed.measure.merged:nth-child(odd) {
-  background-color: #f9f9f9 !important;
+.indexCell.transposed.pivot.merged {
+  background-color: #ff9966 !important; /* Darker orange */
 }
 
-.indexCell.transposed.measure.merged:nth-child(even) {
-  background-color: #e4d0bd !important;
+.indexCell.transposed.dimension.merged {
+  background-color: #ffcc33 !important; /* Bright orange */
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: #e4d0bd !important; /* Beige */
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: #c9dfc5 !important; /* Light green */
 }
 
 .nonNumeric {
   text-align: left;
+  background-color: #ccccff; /* Light purple */
 }
 
 .numeric {
   text-align: right;
+  background-color: #ffcccc; /* Light red */
 }
 
 .negative {
   color: red;
+  background-color: #ffcccc; /* Light red */
 }
 
 .estimate {
   color: darkgray !important;
+  background-color: #ffccff; /* Light pink */
 }
 
 .singleIndex {
   padding-left: 15px !important;
+  background-color: #ffcccc; /* Light red */
 }
 
 .subtotal {
@@ -158,6 +175,7 @@ th.headerCell {
 .total {
   border-top: 2px solid #696969 !important;
   font-weight: bold !important;
+  background-color: #ffffcc; /* Light yellow */
 }
 
 .total.transposed {
@@ -165,7 +183,42 @@ th.headerCell {
   background: #d3d3d3;
 }
 
-.rectElem.animated {
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
-  margin: 4px;
+/* Alternating row colors for measure rows */
+.reportTable tr:nth-child(odd) .rowCell.measure {
+  background-color: #ffccff; /* Light pink */
+}
+
+.reportTable tr:nth-child(even) .rowCell.measure {
+  background-color: #ff99cc; /* Pink */
+}
+
+/* Hover effect */
+.rowCell.measure:hover {
+  background-color: #99ccff !important; /* Light blue */
+}
+
+/* Ensure merged cells still alternate */
+.rowCell.merged.measure:nth-child(odd) {
+  background-color: #ffccff !important; /* Light pink */
+}
+
+.rowCell.merged.measure:nth-child(even) {
+  background-color: #ff99cc !important; /* Pink */
+}
+
+/* For transposed tables, alternate measure rows */
+.indexCell.transposed.measure:nth-child(odd) {
+  background-color: #ffccff;
+}
+
+.indexCell.transposed.measure:nth-child(even) {
+  background-color: #ff99cc;
+}
+
+.indexCell.transposed.measure.merged:nth-child(odd) {
+  background-color: #ffccff !important;
+}
+
+.indexCell.transposed.measure.merged:nth-child(even) {
+  background-color: #ff99cc !important;
 }
