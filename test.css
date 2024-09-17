@@ -69,7 +69,7 @@ table.reportTable th.pivoted-dimension {
 table.reportTable td {
   vertical-align: super; /* Aligns the content at the top of the cell */
   padding: 3px; /* Padding inside data cells */
-  border: 1px solid magenta; /* Magenta border around data cells */
+  border: 1px solid magenta !important; /* Magenta border around data cells */
   border-collapse: collapse; /* Collapses borders with adjacent cells */
 }
 
@@ -98,6 +98,12 @@ table.reportTable td:hover + td {
 
 table.reportTable td:hover::before {
   background-color: lime !important; /* Lime Hover effect for the whole column */
+}
+
+/* Full column hover fix */
+table.reportTable td:hover,
+table.reportTable td:nth-child(hover) {
+  background-color: lime !important; /* Ensure full column hover in lime */
 }
 
 /* Special class for header cells */
