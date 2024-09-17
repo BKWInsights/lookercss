@@ -37,7 +37,7 @@
   border: 0px; /* No borders around the table */
   border-collapse: collapse; /* Collapses borders so adjacent cells share borders */
   table-layout: auto; /* Allows automatic table layout (based on content) */
-  line-height: 1.4; /* Example line height for report tables */
+  line-height: 3.0; /* Example line height for report tables */
 }
 
 /* Styling for elements with focus */
