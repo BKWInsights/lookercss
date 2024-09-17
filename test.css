@@ -13,7 +13,7 @@
   width: auto; /* Width will automatically adapt to content */
   height: auto; /* Height will also adapt automatically to the content */
   padding: 5px; /* Padding inside the tooltip box */
-  background-color: blue; /* Tooltip background color is white */
+  background-color: white; /* Tooltip background color is white */
   
   /* Define the border radius to create rounded corners for the tooltip */
   -webkit-border-radius: 4px; /* For older versions of Safari */
@@ -51,7 +51,7 @@
 
 /* Styling for hover effect */
 .hover {
-  background-color: #e5e5e5; /* Change background color when hovered */
+  background-color: red; /* Change background color when hovered */
 }
 
 /* Styles for a report table */
@@ -77,13 +77,15 @@ table.reportTable td {
   border-collapse: collapse; /* Collapses borders with adjacent cells */
 }
 
-/* Alternierende Zeilenfarben ab der letzten Dimension nach rechts */
-table.reportTable tr:nth-child(even) td:not(:first-child) {
-  background-color: #f5f5f5; /* Hellgrau für gerade Zeilen ab der letzten Dimension */
+/* Alternierende Zeilenfarben für die letzte Dimension und alle Measures */
+table.reportTable tr:nth-child(even) td:last-child,
+table.reportTable tr:nth-child(even) td.numeric {
+  background-color: #f5f5f5; /* Hellgrau für gerade Zeilen der letzten Dimension und numerische Werte */
 }
 
-table.reportTable tr:nth-child(odd) td:not(:first-child) {
-  background-color: #ffffff; /* Weiß für ungerade Zeilen ab der letzten Dimension */
+table.reportTable tr:nth-child(odd) td:last-child,
+table.reportTable tr:nth-child(odd) td.numeric {
+  background-color: #ffffff; /* Weiß für ungerade Zeilen der letzten Dimension und numerische Werte */
 }
 
 /* Special class for header cells */
