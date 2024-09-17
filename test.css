@@ -89,65 +89,44 @@ th.headerCell {
   background-color: #e4ecf3 !important;
 }
 
-/* .headerCell.dimension.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
+/* Alternating row colors for measure rows */
+.reportTable tr:nth-child(odd) .rowCell.measure {
+  background-color: #f9f9f9;
 }
 
-.headerCell.pivot.headerRow {
-  background-color: #ccd8e4;
-  border-right: 1px solid #BDC3C7;
-}
-
-.headerCell.measure.headerRow {
-  background-color: #ccd8e4;
-  border-left: 1px solid #BDC3C7;
-} */
-
-.rowCell {
-  vertical-align: super;
-  padding-left: 5px;
-  border-bottom: 1px solid #bdc3c7;
-}
-
-.rowCell.merged {
-  background-color: #ffffff !important;
-}
-
-.indexCell.transposed {
-  font-weight: bold;
-}
-
-.indexCell.transposed.pivot {
-  background-color: #ccd8e4;
-}
-
-.indexCell.transposed.dimension {
-  background-color: #e4ecf3;
-}
-
-.indexCell.transposed.measure {
+.reportTable tr:nth-child(even) .rowCell.measure {
   background-color: #e4d0bd;
 }
 
-.indexCell.transposed.calculation {
-  background-color: #c9dfc5;
+/* Ensure merged cells still alternate */
+.rowCell.merged.measure:nth-child(odd) {
+  background-color: #f9f9f9 !important;
 }
 
-.indexCell.transposed.pivot.merged {
-  background-color: #ccd8e4 !important;
-}
-
-.indexCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
-}
-
-.indexCell.transposed.measure.merged {
+.rowCell.merged.measure:nth-child(even) {
   background-color: #e4d0bd !important;
 }
 
-.indexCell.transposed.calculation.merged {
-  background-color: #c9dfc5 !important;
+/* Hover effect */
+.rowCell.measure:hover {
+  background-color: #ffffbb !important;
+}
+
+/* For transposed tables, alternate measure rows */
+.indexCell.transposed.measure:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.indexCell.transposed.measure:nth-child(even) {
+  background-color: #e4d0bd;
+}
+
+.indexCell.transposed.measure.merged:nth-child(odd) {
+  background-color: #f9f9f9 !important;
+}
+
+.indexCell.transposed.measure.merged:nth-child(even) {
+  background-color: #e4d0bd !important;
 }
 
 .nonNumeric {
@@ -189,39 +168,4 @@ th.headerCell {
 .rectElem.animated {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   margin: 4px;
-}
-
-/* Alternating row colors for measure rows */
-.rowCell.measure:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-.rowCell.measure:nth-child(even) {
-  background-color: #e4d0bd;
-}
-
-/* Ensure merged cells still alternate */
-.rowCell.merged.measure:nth-child(odd) {
-  background-color: #f9f9f9 !important;
-}
-
-.rowCell.merged.measure:nth-child(even) {
-  background-color: #e4d0bd !important;
-}
-
-/* For transposed tables, alternate measure rows */
-.indexCell.transposed.measure:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-.indexCell.transposed.measure:nth-child(even) {
-  background-color: #e4d0bd;
-}
-
-.indexCell.transposed.measure.merged:nth-child(odd) {
-  background-color: #f9f9f9 !important;
-}
-
-.indexCell.transposed.measure.merged:nth-child(even) {
-  background-color: #e4d0bd !important;
 }
