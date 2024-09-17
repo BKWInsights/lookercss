@@ -51,7 +51,7 @@
 
 /* Styling for hover effect */
 .hover {
-  background-color: red; /* Change background color when hovered */
+  background-color: #e5e5e5; /* Change background color when hovered */
 }
 
 /* Styles for a report table */
@@ -86,6 +86,11 @@ table.reportTable tr:nth-child(even) td.numeric {
 table.reportTable tr:nth-child(odd) td:last-child,
 table.reportTable tr:nth-child(odd) td.numeric {
   background-color: #ffffff; /* Weiß für ungerade Zeilen der letzten Dimension und numerische Werte */
+}
+
+/* Hover Effekt: Rot über alle Zellen, auch bei alternierenden Farben */
+table.reportTable tr:hover td {
+  background-color: red !important; /* Roter Hover-Effekt */
 }
 
 /* Special class for header cells */
