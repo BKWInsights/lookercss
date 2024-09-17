@@ -47,15 +47,23 @@
 /* Styles for a report table */
 .reportTable {
   font-family: 'Open Sans', sans-serif; /* Updated font family */
-  border: 1px solid pink; /* Pink border around the table */
+  border: 1px solid yellow; /* Gelber Rand um die Tabelle */
   border-collapse: collapse; /* Borders between table cells are collapsed */
   border-spacing: 2px; /* Sets the space between table cells */
 }
 
-/* Styling for the table header cells inside reportTable */
+/* Styling für die Tabellenzellen, jetzt mit gelbem Rand */
+table.reportTable td {
+  vertical-align: super; /* Aligns the content at the top of the cell */
+  padding: 3px; /* Padding inside data cells */
+  border: 1px solid yellow !important; /* Gelber Rand um die Datenzellen */
+  border-collapse: collapse; /* Collapses borders with adjacent cells */
+}
+
+/* Styling für die Tabellen-Headerzellen */
 table.reportTable th {
-  border: 1px solid cyan; /* Cyan border around header cells */
-  border-bottom: 1px solid green !important; /* Green bottom border for header cells */
+  border: 1px solid yellow; /* Gelber Rand um die Headerzellen */
+  border-bottom: 1px solid green !important; /* Grüne untere Grenze für Headerzellen */
   padding: 3px; /* Padding inside header cells */
   text-align: left; /* Standard für alle Header: linksbündig, außer pivotisierte Header */
 }
@@ -65,51 +73,45 @@ table.reportTable th.pivoted-dimension {
   text-align: center; /* Zentriert die pivotisierten Dimensionen */
 }
 
-/* Styling für die letzten Dimensionen und numerischen Werte */
-table.reportTable td {
-  vertical-align: super; /* Aligns the content at the top of the cell */
-  padding: 3px; /* Padding inside data cells */
-  border: 1px solid magenta !important; /* Magenta border around data cells */
-  border-collapse: collapse; /* Collapses borders with adjacent cells */
-}
-
 /* Alternierende Zeilenfarben für die letzte Dimension und alle Measures */
 table.reportTable tr:nth-child(even) td:last-child,
 table.reportTable tr:nth-child(even) td.numeric {
-  background-color: violet; /* Violet for even rows of the last dimension and numeric values */
+  background-color: violet; /* Violett für gerade Zeilen der letzten Dimension und numerische Werte */
 }
 
 table.reportTable tr:nth-child(odd) td:last-child,
 table.reportTable tr:nth-child(odd) td.numeric {
-  background-color: lightblue; /* Light blue for odd rows of the last dimension and numeric values */
+  background-color: lightblue; /* Hellblau für ungerade Zeilen der letzten Dimension und numerische Werte */
 }
 
-/* Hover Effekt: Rot über alle Zellen, auch bei alternierenden Farben */
+/* Hover-Effekt für Zeilen: Rot über alle Zellen */
 table.reportTable tr:hover td {
   background-color: red !important; /* Roter Hover-Effekt für die ganze Zeile */
 }
 
-/* Hover Effekt für die gesamte Spalte */
+/* Spalten-Hover mit :nth-child */
 table.reportTable td:hover,
 table.reportTable td:hover ~ td,
-table.reportTable td:hover + td {
-  background-color: lime !important; /* Lime green Hover-Effekt für die ganze Spalte */
+table.reportTable td:nth-child(hover) {
+  background-color: lime !important; /* Limettengrüner Hover-Effekt für die ganze Spalte */
 }
 
+table.reportTable td:nth-child(1):hover,
+table.reportTable td:nth-child(2):hover,
+table.reportTable td:nth-child(3):hover,
+table.reportTable td:nth-child(4):hover {
+  background-color: lime !important; /* Limettengrüner Hover-Effekt für jede Zelle in der Spalte */
+}
+
+/* Full column hover fix */
 table.reportTable td:hover::before {
   background-color: lime !important; /* Lime Hover effect for the whole column */
 }
 
-/* Full column hover fix */
-table.reportTable td:hover,
-table.reportTable td:nth-child(hover) {
-  background-color: lime !important; /* Ensure full column hover in lime */
-}
-
 /* Special class for header cells */
 .headerCell {
-  border-bottom: 1px solid green !important; /* Green bottom border */
-  font-weight: bold; /* Make text bold */
+  border-bottom: 1px solid green !important; /* Grüne untere Grenze für Headerzellen */
+  font-weight: bold; /* Fettgedruckter Text */
   padding: 3px; /* Padding inside header cells */
 }
 
@@ -120,7 +122,7 @@ table.reportTable td:nth-child(hover) {
 
 /* Merged index cells should have a white background */
 .indexCell.transposed.merged {
-  background-color: lightgray !important; /* Force light gray background for merged cells */
+  background-color: lightgray !important; /* Heller grauer Hintergrund für zusammengeführte Zellen */
 }
 
 /* Row cell specific styling */
@@ -131,22 +133,22 @@ table.reportTable td:nth-child(hover) {
 
 /* Left-align non-numeric values */
 .nonNumeric {
-  text-align: left; /* Left-aligns text content */
+  text-align: left; /* Links-Ausrichtung für Text */
 }
 
 /* Right-align numeric values */
 .numeric {
-  text-align: right; /* Right-aligns numeric values */
+  text-align: right; /* Rechts-Ausrichtung für numerische Werte */
 }
 
 /* Make negative values appear in blue */
 .negative {
-  color: blue; /* Blue text color for negative values */
+  color: blue; /* Blaue Textfarbe für negative Werte */
 }
 
 /* Styling for estimated values */
 .estimate {
-  color: purple !important; /* Purple text color for estimates */
+  color: purple !important; /* Lila Textfarbe für geschätzte Werte */
 }
 
 /* Apply extra padding for single-index cells */
@@ -156,23 +158,23 @@ table.reportTable td:nth-child(hover) {
 
 /* Styling for subtotal rows */
 .subtotal {
-  font-style: normal; /* Normal font style */
-  font-weight: normal; /* Normal weight */
-  background: brown; /* Brown background for subtotal rows */
+  font-style: normal; /* Normaler Schriftstil */
+  font-weight: normal; /* Normalgewicht */
+  background: brown; /* Brauner Hintergrund für Zwischensummen-Zeilen */
 }
 
-/* Styling for total rows */
+/* Styling für Gesamtsummen-Zeilen */
 .total {
-  border-top: 2px solid orange !important; /* Orange top border for total rows */
-  font-weight: bold !important; /* Force bold text */
-  font-style: normal; /* Normal font style */
-  background: gray; /* Gray background for total rows */
+  border-top: 2px solid orange !important; /* Orange obere Grenze für Gesamtsummen-Zeilen */
+  font-weight: bold !important; /* Fettgedruckter Text */
+  font-style: normal; /* Normaler Schriftstil */
+  background: gray; /* Grauer Hintergrund für Gesamtsummen-Zeilen */
 }
 
 /* Special case for transposed total rows */
 .total.transposed {
-  border-top: 0px !important; /* No top border */
-  background: black; /* Black background for transposed total rows */
+  border-top: 0px !important; /* Keine obere Grenze für transponierte Gesamtsummen-Zeilen */
+  background: black; /* Schwarzer Hintergrund für transponierte Gesamtsummen-Zeilen */
 }
 
 /* Styling for animated rectangular elements */
