@@ -23,7 +23,7 @@
   /* Apply shadow around the tooltip */
   -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4); /* Blue shadow */
   -moz-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4);
-  box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   
   pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
   font-family: 'Open Sans', sans-serif; /* Set the tooltip font */
@@ -75,12 +75,12 @@ table.reportTable tr:nth-child(odd) td.numeric {
   background-color: lightblue !important; /* Light blue background for odd rows */
 }
 
-/* Hover effect: Royal blue over all cells, overriding alternating colors */
+/* Hover effect for entire row: Royal blue over all cells */
 table.reportTable tr:hover td {
   background-color: royalblue !important; /* Royal blue when hovered */
 }
 
-/* Special header cell styling */
+/* Header cell styling */
 .headerCell {
   background-color: orange; /* Orange for header cells */
   padding: 5px; /* Padding inside header cells */
@@ -92,13 +92,13 @@ table.reportTable th:hover {
   background-color: pink !important; /* Pink background for header when hovered */
 }
 
-/* Hover effect for column cells */
+/* Column hover effect */
 table.reportTable td:hover,
 table.reportTable td:hover ~ td {
   background-color: royalblue !important; /* Royal blue for column hover */
 }
 
-/* Specific styles for the row cells */
+/* Specific styles for row cells */
 .rowCell {
   vertical-align: super; /* Aligns content towards the top of the cell */
   padding-left: 5px; /* Adds padding inside the cell */
