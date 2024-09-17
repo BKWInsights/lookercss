@@ -1,141 +1,175 @@
-@font-face {
-  font-family: 'Noto Sans TC';
-  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2')
-    format('woff2');
-}
-@font-face {
-  font-family: 'Noto Sans SC';
-  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2')
-    format('woff2');
+/* Hover effect for the entire row */
+table.reportTable tr:hover td {
+  background-color: royalblue !important; /* Royal blue for row hover */
 }
 
-/* Tooltip styling used to display small pop-up messages when elements are hovered */
+/* Styling for the column hover effect */
+table.reportTable td:hover,
+table.reportTable td:hover ~ td {
+  background-color: royalblue !important; /* Royal blue for column hover */
+}
+
+/* Define Open Sans as the primary font */
+@font-face {
+  font-family: 'Open Sans'; /* Font family name used in CSS */
+  font-weight: normal; /* Normal weight */
+  font-style: normal; /* Normal style */
+  src: url('https://static-a.lookercdn.com/fonts/vendor/opensans/opensans_regular/OpenSans-Regular-webfont-9bfa20540f.woff') format('woff'),
+    url('/fonts/vendor/opensans/opensans_regular/OpenSans-Regular-webfont-9bfa20540f.woff') format('woff'); /* URLs to the font files */
+}
+
+/* Style for a tooltip element */
 #tooltip {
-  position: absolute; /* Positions the tooltip relative to the document, allowing it to appear anywhere */
-  width: auto; /* Automatically adjusts the width of the tooltip to fit content */
-  height: auto; /* Automatically adjusts the height of the tooltip based on content */
-  padding: 5px; /* Adds 5px of padding inside the tooltip for spacing */
-  background-color: #ffcccc; /* Sets a light red background color to make the tooltip stand out */
-  border-radius: 4px; /* Rounds the corners of the tooltip to 4px for a smoother appearance */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Adds a shadow for depth, giving the tooltip a floating effect */
-  pointer-events: none; /* Prevents the tooltip from interfering with other interactive elements */
-  font-family: sans-serif; /* Uses a clean sans-serif font for readability */
-  font-size: 12px; /* Ensures the tooltip text is legible without being too large */
-  z-index: 2; /* Positions the tooltip above other elements */
+  position: absolute; /* The tooltip is positioned relative to the nearest positioned ancestor */
+  width: auto; /* Width will automatically adapt to content */
+  height: auto; /* Height will also adapt automatically to the content */
+  padding: 5px; /* Padding inside the tooltip box */
+  background-color: white; /* Tooltip background color is white */
+  
+  /* Define the border radius to create rounded corners for the tooltip */
+  -webkit-border-radius: 4px; /* For older versions of Safari */
+  -moz-border-radius: 4px; /* For older versions of Firefox */
+  border-radius: 4px; /* Modern standard */
+  
+  /* Apply shadow around the tooltip */
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Older Safari */
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Older Firefox */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Modern standard */
+
+  pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
+  font-family: 'Open Sans', sans-serif; /* Updated font family */
+  font-size: 12px; /* Sets tooltip text size */
+  z-index: 2; /* Ensures the tooltip appears above other elements */
 }
 
-/* Table style for displaying the tooltip content */
+/* Table used inside tooltips */
 .tooltipTable {
-  font-family: Open Sans, Helvetica, Arial, sans-serif; /* Ensures the table uses a consistent sans-serif font */
-  border: 0px; /* Removes the border around the table */
-  border-collapse: collapse; /* Collapses the table borders for a cleaner appearance */
-  table-layout: auto; /* Automatically adjusts the table layout based on content */
+  font-family: 'Open Sans', sans-serif; /* Updated font family */
+  border: 0px; /* No borders around the table */
+  border-collapse: collapse; /* Collapses borders so adjacent cells share borders */
+  table-layout: auto; /* Allows automatic table layout (based on content) */
 }
 
-/* Highlighting elements when focused */
+/* Styling for elements with focus */
 .focus {
-  font-weight: bold; /* Makes the text bold to emphasize the focused element */
-  background-color: #ccffcc; /* Sets a light green background to further highlight the focus */
+  font-weight: bold; /* Makes focused text bold */
 }
 
-/* Hides elements with the "hidden" class */
+/* Class to hide elements */
 .hidden {
-  display: none; /* Completely hides the element from view and removes it from the layout */
+  display: none; /* The element is hidden and won't take up space */
 }
 
-/* Hover effect for elements to change background color when hovered */
+/* Styling for hover effect */
 .hover {
-  background-color: #ffffbb; /* Changes background to a light yellow when hovered */
+  background-color: #e5e5e5; /* Change background color when hovered */
 }
 
-/* Main table styling for displaying report data */
+/* Styles for a report table */
 .reportTable {
-  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif; /* Uses a consistent font for readability */
-  color: #696969; /* Sets the text color to a dark gray for good contrast */
-  border-collapse: collapse; /* Collapses the borders of the table cells into a single border */
-  border-spacing: 3px; /* Adds 3px of space between table cells for better readability */
-  table-layout: fixed; /* Fixes the table layout to ensure uniform column widths */
+  font-family: 'Open Sans', sans-serif; /* Updated font family */
+  border: 1px solid #cccccc; /* Light gray border around the table */
+  border-collapse: collapse; /* Borders between table cells are collapsed */
+  border-spacing: 2px; /* Sets the space between table cells */
 }
 
-/* Alternating background colors for odd and even rows in the Measures and last dimension column */
-.reportTable tr:nth-child(odd) td.measure,
-.reportTable tr:nth-child(odd) td:last-child {
-  background-color: #ffccff !important; /* Light pink background for odd rows in Measures and last dimension */
+/* Styling for the table header cells inside reportTable */
+table.reportTable th {
+  border: 1px solid #cccccc; /* Light gray border around header cells */
+  border-bottom: 1px solid #000000 !important; /* Force black bottom border for header cells */
+  padding: 3px; /* Padding inside header cells */
 }
 
-.reportTable tr:nth-child(even) td.measure,
-.reportTable tr:nth-child(even) td:last-child {
-  background-color: #ff99cc !important; /* Darker pink background for even rows in Measures and last dimension */
+/* Styling for data cells in the reportTable */
+table.reportTable td {
+  vertical-align: super; /* Aligns the content at the top of the cell */
+  padding: 3px; /* Padding inside data cells */
+  border: 1px solid #cccccc; /* Light gray border around data cells */
+  border-collapse: collapse; /* Collapses borders with adjacent cells */
 }
 
-/* Sets uniform background color for all other dimension columns */
-.reportTable td.dimension {
-  background-color: #ffffff !important; /* Ensures all dimension columns (except the last one) are white */
+/* Alternierende Zeilenfarben für die letzte Dimension und alle Measures */
+table.reportTable tr:nth-child(even) td:last-child,
+table.reportTable tr:nth-child(even) td.numeric {
+  background-color: #f5f5f5; /* Hellgrau für gerade Zeilen der letzten Dimension und numerische Werte */
 }
 
-/* Sets the header styling for all table header cells */
-th.headerCell {
-  background-color: #ccd8e4; /* Sets a light blue background for header cells */
-  padding: 5px; /* Adds 5px padding inside header cells for spacing */
-  border-bottom: 1px solid #bdc3c7; /* Adds a light gray bottom border for header cell separation */
+table.reportTable tr:nth-child(odd) td:last-child,
+table.reportTable tr:nth-child(odd) td.numeric {
+  background-color: #ffffff; /* Weiß für ungerade Zeilen der letzten Dimension und numerische Werte */
 }
 
-/* Specific styling for dimension headers */
-.headerCell.dimension {
-  background-color: #e4ecf3; /* Sets a slightly lighter blue for dimension headers */
-  border-right: 1px solid #bdc3c7; /* Adds a light gray right border for column separation */
+/* Special class for header cells */
+.headerCell {
+  border-bottom: 1px solid #000000 !important; /* Black bottom border */
+  font-weight: bold; /* Make text bold */
+  padding: 3px; /* Padding inside header cells */
 }
 
-/* Specific styling for pivot headers */
-.headerCell.pivot {
-  background-color: #ccd8e4; /* Uses the same background as main headers */
-  border-right: 1px solid #bdc3c7; /* Adds a light gray right border for pivot column separation */
+/* Styling for index cells that are transposed */
+.indexCell.transposed {
+  font-weight: bold; /* Make text bold */
 }
 
-/* Specific styling for measure headers */
-.headerCell.measure {
-  background-color: #e4d0bd; /* Sets a beige background for measure headers */
-  border-left: 1px solid #bdc3c7; /* Adds a light gray left border to separate the measure headers */
+/* Merged index cells should have a white background */
+.indexCell.transposed.merged {
+  background-color: #f5f5f5 !important; /* Force white background for merged cells */
 }
 
-/* Styling for calculation measure headers */
-.headerCell.measure.calculation {
-  background-color: #c9dfc5; /* Sets a light green background for calculation measure headers */
-  border-left: 1px solid #bdc3c7; /* Adds a light gray left border to separate calculation headers */
-}
-
-/* Styles for individual table cells */
+/* Row cell specific styling */
 .rowCell {
-  vertical-align: super; /* Aligns content towards the top of the cell */
-  padding-left: 5px; /* Adds 5px of left padding for cell content spacing */
-  border-bottom: 1px solid #bdc3c7; /* Adds a light gray bottom border to separate rows */
+  vertical-align: super; /* Aligns content at the top of the cell */
+  padding-left: 5px; /* Adds padding to the left */
 }
 
-/* Ensures merged cells inherit the background color of their row */
-.rowCell.merged {
-  background-color: inherit !important; /* Makes sure merged cells use the same background as the row */
+/* Left-align non-numeric values */
+.nonNumeric {
+  text-align: left; /* Left-aligns text content */
 }
 
-/* Hover effect for entire table rows, overriding any alternating row colors */
-.reportTable tr:hover td,
-.reportTable th:hover {
-  background-color: royalblue !important; /* Ensures the entire row turns royal blue when hovered, overriding alternating row colors */
+/* Right-align numeric values */
+.numeric {
+  text-align: right; /* Right-aligns numeric values */
 }
 
-/* Hover effect for entire columns, highlighting the column when a cell is hovered */
-.reportTable td:hover,
-.reportTable td:nth-child(hover) {
-  background-color: royalblue !important; /* Ensures the entire column turns royal blue when hovered, overriding alternating column colors */
+/* Make negative values appear in red */
+.negative {
+  color: blue; /* Text color is red for negative values */
 }
 
-/* Ensures links inside the table show the hand (pointer) cursor */
-.reportTable a {
-  cursor: pointer !important; /* Changes the cursor to a hand when hovering over links inside the table */
+/* Styling for estimated values */
+.estimate {
+  color: darkgray !important; /* Dark gray text color for estimates */
 }
 
-/* This rule applies to the "total" rows, which summarize or aggregate data */
+/* Apply extra padding for single-index cells */
+.singleIndex {
+  padding-left: 15px !important; /* Extra left padding */
+}
+
+/* Styling for subtotal rows */
+.subtotal {
+  font-style: normal; /* Italic font style */
+  font-weight: normal; /* Bold text */
+  background: white; /* Light gray background */
+}
+
+/* Styling for total rows */
 .total {
-  border-top: 2px solid #696969 !important; /* Adds a 2px solid dark gray top border to visually separate the total row */
-  font-weight: bold !important; /* Makes the text bold to emphasize that this is an important row */
-  background-color: #ffffcc; /* Sets a light yellow background for the total row to make it stand out */
+  border-top: 2px solid #000000 !important; /* Thick black top border */
+  font-weight: bold !important; /* Force bold text */
+  font-style: normal; /* Italic font style */
+  background: #f5f5f5; /* Light gray background */
+}
+
+/* Special case for transposed total rows */
+.total.transposed {
+  border-top: 0px !important; /* No top border */
+  background: #d3d3d3; /* Light gray background */
+}
+
+/* Styling for animated rectangular elements */
+.rectElem.animated {
+  font-family: 'Open Sans', sans-serif; /* Updated font family */
+  margin: 4px; /* Margin around the rectangular element */
 }
