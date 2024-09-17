@@ -189,3 +189,13 @@ th.headerCell {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   margin: 4px;
 }
+
+/* Hover-Effekt für Zeilen und Spalten */
+.reportTable tr:hover td,
+.reportTable th:hover {
+  background-color: red !important; /* Roter Hover-Effekt */
+}
+
+.reportTable td:hover {
+  background-color: lime !important; /* Limettengrün für Hover-Effekt in Spalten */
+}
