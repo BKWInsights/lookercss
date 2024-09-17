@@ -89,71 +89,35 @@ table.reportTable tr:hover td {
   background-color: red !important; /* Roter Hover-Effekt für die ganze Zeile */
 }
 
-/* Spalten-Hover mit :nth-child */
-table.reportTable td:hover,
-table.reportTable td:hover ~ td,
-table.reportTable td:nth-child(hover) {
-  background-color: lime !important; /* Limettengrüner Hover-Effekt für die ganze Spalte */
+/* Full Spalten-Hover mit :nth-child für alle Spalten */
+table.reportTable td:hover {
+  background-color: lime !important; /* Lime Hover Effekt für die Zelle */
 }
 
-table.reportTable td:nth-child(1):hover,
-table.reportTable td:nth-child(2):hover,
-table.reportTable td:nth-child(3):hover,
-table.reportTable td:nth-child(4):hover {
-  background-color: lime !important; /* Limettengrüner Hover-Effekt für jede Zelle in der Spalte */
+/* Spalten-Hover für alle Zellen */
+table.reportTable td:hover::before,
+table.reportTable td:hover ~ td {
+  background-color: lime !important; /* Lime Hover Effekt für die gesamte Spalte */
 }
 
-/* Full column hover fix */
-table.reportTable td:hover::before {
-  background-color: lime !important; /* Lime Hover effect for the whole column */
+/* Hover-Effekt für Header-Zellen */
+table.reportTable th:hover {
+  background-color: lime !important; /* Lime Hover Effekt für Header */
 }
 
-/* Special class for header cells */
-.headerCell {
-  border-bottom: 1px solid green !important; /* Grüne untere Grenze für Headerzellen */
-  font-weight: bold; /* Fettgedruckter Text */
-  padding: 3px; /* Padding inside header cells */
+/* Spezieller Fix für die Spalten, damit die gesamte Spalte hervortritt */
+table.reportTable tr td:nth-child(hover) {
+  background-color: lime !important; /* Lime Hover Effekt für Spalten */
 }
 
-/* Styling for index cells that are transposed */
-.indexCell.transposed {
-  font-weight: bold; /* Make text bold */
-}
-
-/* Merged index cells should have a white background */
-.indexCell.transposed.merged {
-  background-color: lightgray !important; /* Heller grauer Hintergrund für zusammengeführte Zellen */
-}
-
-/* Row cell specific styling */
-.rowCell {
-  vertical-align: super; /* Aligns content at the top of the cell */
-  padding-left: 5px; /* Adds padding to the left */
-}
-
-/* Left-align non-numeric values */
-.nonNumeric {
-  text-align: left; /* Links-Ausrichtung für Text */
-}
-
-/* Right-align numeric values */
-.numeric {
-  text-align: right; /* Rechts-Ausrichtung für numerische Werte */
-}
-
-/* Make negative values appear in blue */
+/* Styling für die negativen Werte */
 .negative {
   color: blue; /* Blaue Textfarbe für negative Werte */
 }
 
-/* Styling for estimated values */
-.estimate {
-  color: purple !important; /* Lila Textfarbe für geschätzte Werte */
-}
-
 /* Apply extra padding for single-index cells */
 .singleIndex {
-  padding-left: 15px !important; /* Extra left padding */
+  padding-left: 15px !important; /* Extra padding */
 }
 
 /* Styling for subtotal rows */
