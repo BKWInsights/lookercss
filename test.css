@@ -77,6 +77,15 @@ table.reportTable td {
   border-collapse: collapse; /* Collapses borders with adjacent cells */
 }
 
+/* Alternierende Zeilenfarben für die reportTable */
+table.reportTable tr:nth-child(even) {
+  background-color: #f5f5f5; /* Hellgrau für gerade Zeilen */
+}
+
+table.reportTable tr:nth-child(odd) {
+  background-color: #ffffff; /* Weiß für ungerade Zeilen */
+}
+
 /* Special class for header cells */
 .headerCell {
   border-bottom: 1px solid #000000 !important; /* Black bottom border */
