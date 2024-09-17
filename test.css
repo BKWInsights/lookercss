@@ -3,27 +3,6 @@
   src: url('./fonts/arial.woff2') format('woff2');
 }
 
-/* Subtotal für die erste Spalte */
-table.reportTable td:first-child {
-  background-color: #d3d3d3; /* Hellgrauer Hintergrund für die erste Spalte */
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* Subtotal für die zweite Spalte */
-table.reportTable td:nth-child(2) {
-  background-color: #e0e0ff; /* Hellblauer Hintergrund für die zweite Spalte */
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* Subtotal für die dritte Spalte */
-table.reportTable td:nth-child(3) {
-  background-color: #ffe0e0; /* Hellroter Hintergrund für die dritte Spalte */
-  font-style: italic;
-  font-weight: bold;
-}
-
 #tooltip {
   position: absolute;
   width: auto;
@@ -112,6 +91,13 @@ table.reportTable th:hover {
 .positive {
   color: green; /* Positive Zahlen grün */
 }
+
+document.querySelectorAll('.negative').forEach(function(cell) {
+  let value = parseFloat(cell.textContent);
+  if (value > 0) {
+    cell.textContent = `-${cell.textContent}`;
+  }
+})
 
 .negative {
   color: red; /* Negative Zahlen rot */
