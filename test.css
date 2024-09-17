@@ -90,7 +90,13 @@ table.reportTable tr:nth-child(odd) td.numeric {
 
 /* Hover Effekt: Rot über alle Zellen, auch bei alternierenden Farben */
 table.reportTable tr:hover td {
-  background-color: red !important; /* Roter Hover-Effekt */
+  background-color: red !important; /* Roter Hover-Effekt für die ganze Zeile */
+}
+
+/* Hover Effekt für die gesamte Spalte */
+table.reportTable td:hover,
+table.reportTable td:hover ~ td {
+  background-color: red !important; /* Roter Hover-Effekt für die ganze Spalte */
 }
 
 /* Special class for header cells */
