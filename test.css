@@ -8,12 +8,12 @@
   width: auto;
   height: auto;
   padding: 5px;
-  background-color: blue;
+  background-color: white;
   border-radius: 4px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   pointer-events: none;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   z-index: 2;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .hover {
-  background-color: #e5e5e5;
+  background-color: #ffcccc; /* Mouseover-Hintergrundfarbe geändert zu rot (#ffcccc) */
 }
 
 .reportTable {
@@ -54,6 +54,11 @@ table.reportTable td {
   padding: 4px; /* Weniger Abstand in den Zellen */
   border: 1px solid #cccccc;
   border-collapse: collapse;
+}
+
+table.reportTable td:hover, 
+table.reportTable th:hover {
+  background-color: #ffcccc; /* Ändert die Hintergrundfarbe auf rot bei Mouseover */
 }
 
 .headerCell {
