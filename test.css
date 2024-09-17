@@ -1,147 +1,158 @@
-/* Define Open Sans as the primary font */
 @font-face {
-  font-family: 'Open Sans'; /* Font family name used in CSS */
-  font-weight: normal; /* Normal weight */
-  font-style: normal; /* Normal style */
-  src: url('https://static-a.lookercdn.com/fonts/vendor/opensans/opensans_regular/OpenSans-Regular-webfont-9bfa20540f.woff') format('woff'),
-    url('/fonts/vendor/opensans/opensans_regular/OpenSans-Regular-webfont-9bfa20540f.woff') format('woff'); /* URLs to the font files */
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2')
+    format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2')
+    format('woff2');
 }
 
-/* Style for a tooltip element */
 #tooltip {
-  position: absolute; /* The tooltip is positioned relative to the nearest positioned ancestor */
-  width: auto; /* Width will automatically adapt to content */
-  height: auto; /* Height will also adapt automatically to the content */
-  padding: 5px; /* Padding inside the tooltip box */
-  background-color: yellow; /* Tooltip background color is yellow */
-  
-  /* Define the border radius to create rounded corners for the tooltip */
-  -webkit-border-radius: 4px; /* For older versions of Safari */
-  -moz-border-radius: 4px; /* For older versions of Firefox */
-  border-radius: 4px; /* Modern standard */
-  
-  /* Apply shadow around the tooltip */
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4); /* Shadow in blue */
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4); /* Shadow in blue */
-  box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4); /* Shadow in blue */
-
-  pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
-  font-family: 'Open Sans', sans-serif; /* Updated font family */
-  font-size: 12px; /* Sets tooltip text size */
-  z-index: 2; /* Ensures the tooltip appears above other elements */
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  z-index: 2;
 }
 
-/* Table used inside tooltips */
 .tooltipTable {
-  font-family: 'Open Sans', sans-serif; /* Updated font family */
-  border: 0px; /* No borders around the table */
-  border-collapse: collapse; /* Collapses borders so adjacent cells share borders */
-  table-layout: auto; /* Allows automatic table layout (based on content) */
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: auto;
 }
 
-/* Styling for hover effect */
+.focus {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
 .hover {
-  background-color: orange; /* Orange hover effect */
+  background-color: #ffffbb;
 }
 
-/* Styles for a report table */
 .reportTable {
-  font-family: 'Open Sans', sans-serif; /* Updated font family */
-  border: 1px solid yellow; /* Gelber Rand um die Tabelle */
-  border-collapse: collapse; /* Borders between table cells are collapsed */
-  border-spacing: 2px; /* Sets the space between table cells */
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC,
+    sans-serif;
+  border-collapse: separate;
+  border-spacing: 3px;
+  table-layout: fixed;
 }
 
-/* Styling für die Tabellenzellen, jetzt mit gelbem Rand */
-table.reportTable td {
-  vertical-align: super; /* Aligns the content at the top of the cell */
-  padding: 3px; /* Padding inside data cells */
-  border: 1px solid yellow !important; /* Gelber Rand um die Datenzellen */
-  border-collapse: collapse; /* Collapses borders with adjacent cells */
+/* Alternierende Zeilenfarben hinzufügen */
+.reportTable tr:nth-child(even) {
+  background-color: #f0f0f0; /* Helle graue Farbe für gerade Zeilen */
 }
 
-/* Styling für die Tabellen-Headerzellen */
-table.reportTable th {
-  border: 1px solid yellow; /* Gelber Rand um die Headerzellen */
-  border-bottom: 1px solid green !important; /* Grüne untere Grenze für Headerzellen */
-  padding: 3px; /* Padding inside header cells */
-  text-align: left; /* Standard für alle Header: linksbündig, außer pivotisierte Header */
+.reportTable tr:nth-child(odd) {
+  background-color: #ffffff; /* Weiße Farbe für ungerade Zeilen */
 }
 
-/* Pivotisierte Header-Dimensionen (zentriert) */
-table.reportTable th.pivoted-dimension {
-  text-align: center; /* Zentriert die pivotisierten Dimensionen */
+th.headerCell {
+  border-bottom: 1px solid #000000 !important;
+  font-weight: bold;
+  padding: 5px;
 }
 
-/* Alternierende Zeilenfarben für die letzte Dimension und alle Measures */
-table.reportTable tr:nth-child(even) td:last-child,
-table.reportTable tr:nth-child(even) td.numeric {
-  background-color: violet; /* Violett für gerade Zeilen der letzten Dimension und numerische Werte */
+.headerCell.merged {
+  text-align: center !important;
+  background-color: #ffffff !important;
 }
 
-table.reportTable tr:nth-child(odd) td:last-child,
-table.reportTable tr:nth-child(odd) td.numeric {
-  background-color: lightblue; /* Hellblau für ungerade Zeilen der letzten Dimension und numerische Werte */
+.headerCell.transposed.dimension.merged {
+  text-align: center !important;
+  background-color: #ffffff !important;
 }
 
-/* Hover-Effekt für Zeilen: Rot über alle Zellen */
-table.reportTable tr:hover td {
-  background-color: red !important; /* Roter Hover-Effekt für die ganze Zeile */
+.indexCell.transposed {
+  font-weight: bold;
 }
 
-/* Vollständiger Spaltenhover */
-table.reportTable td:hover,
-table.reportTable td:hover ~ td {
-  background-color: lime !important; /* Lime Hover Effekt für die gesamte Spalte */
+.indexCell.transposed.merged {
+  background-color: #ffffff !important;
 }
 
-table.reportTable td:hover::before {
-  background-color: lime !important; /* Lime Hover Effekt für die gesamte Spalte */
+.rowCell {
+  vertical-align: super;
+  padding-left: 5px;
 }
 
-/* Full column hover fix for each td */
-table.reportTable td:nth-child(hover) {
-  background-color: lime !important; /* Full Lime Hover Effekt für die gesamte Spalte */
+.rowCell.merged {
+  background-color: #ffffff !important;
 }
 
-/* Hover-Effekt für Header-Zellen */
-table.reportTable th:hover {
-  background-color: lime !important; /* Lime Hover Effekt für Header */
+.rowCell.transposed.dimension.merged {
+  background-color: #ffffff !important;
 }
 
-/* Styling für die negativen Werte */
+.nonNumeric {
+  text-align: left;
+}
+
+.numeric {
+  text-align: right;
+}
+
 .negative {
-  color: blue; /* Blaue Textfarbe für negative Werte */
+  color: red;
 }
 
-/* Apply extra padding for single-index cells */
+.estimate {
+  color: darkgray !important;
+}
+
 .singleIndex {
-  padding-left: 15px !important; /* Extra padding */
+  padding-left: 15px !important;
 }
 
-/* Styling for subtotal rows */
 .subtotal {
-  font-style: normal; /* Normaler Schriftstil */
-  font-weight: normal; /* Normalgewicht */
-  background: brown; /* Brauner Hintergrund für Zwischensummen-Zeilen */
+  font-style: italic;
+  font-weight: bold !important;
 }
 
-/* Styling für Gesamtsummen-Zeilen */
 .total {
-  border-top: 2px solid orange !important; /* Orange obere Grenze für Gesamtsummen-Zeilen */
-  font-weight: bold !important; /* Fettgedruckter Text */
-  font-style: normal; /* Normaler Schriftstil */
-  background: gray; /* Grauer Hintergrund für Gesamtsummen-Zeilen */
+  border-top: 2px solid #000000;
+  font-weight: bold !important;
 }
 
-/* Special case for transposed total rows */
 .total.transposed {
-  border-top: 0px !important; /* Keine obere Grenze für transponierte Gesamtsummen-Zeilen */
-  background: black; /* Schwarzer Hintergrund für transponierte Gesamtsummen-Zeilen */
+  border-top: 0px !important;
 }
 
-/* Styling for animated rectangular elements */
+.dimension.transposed {
+  font-weight: bold;
+}
+
 .rectElem.animated {
-  font-family: 'Open Sans', sans-serif; /* Updated font family */
-  margin: 4px; /* Margin around the rectangular element */
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  padding: 4px;
+}
+
+.headerCell.animated {
+  border-bottom: 4px solid #ffffff;
+  box-shadow: inset 0px -1px 0px 0px #000000 !important;
+  font-weight: bold;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Spalten- und Zeilenhover */
+.reportTable td:hover,
+.reportTable th:hover {
+  background-color: #ffffbb !important; /* Hover-Effekt für Zellen und Header */
 }
