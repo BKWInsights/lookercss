@@ -67,12 +67,12 @@ table.reportTable th {
   border: 1px solid #cccccc; /* Light gray border around header cells */
   border-bottom: 1px solid #000000 !important; /* Force black bottom border for header cells */
   padding: 3px; /* Padding inside header cells */
-  text-align: left; /* Links ausgerichteter Text in den Headern, ändere zu 'center' für zentrierte Header */
+  text-align: left; /* Standard für alle Header: linksbündig, außer pivotisierte Header */
 }
 
-/* Styling für zentrierte Header, alternativ: text-align: center; für linksbündig */
-table.reportTable th {
-  text-align: center; /* Zentriert den Headertext, für linksbündige Header ändere zu 'left' */
+/* Pivotisierte Header-Dimensionen (zentriert) */
+table.reportTable th.pivoted-dimension {
+  text-align: center; /* Zentriert die pivotisierten Dimensionen */
 }
 
 /* Styling für die letzten Dimensionen und numerischen Werte */
@@ -104,6 +104,10 @@ table.reportTable td:hover,
 table.reportTable td:hover ~ td,
 table.reportTable td:hover + td {
   background-color: red !important; /* Roter Hover-Effekt für die ganze Spalte */
+}
+
+table.reportTable td:hover::before {
+  background-color: red !important; /* Behandelt die ganze Spalte */
 }
 
 /* Special class for header cells */
