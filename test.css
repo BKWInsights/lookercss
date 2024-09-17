@@ -37,7 +37,6 @@
   border: 0px; /* No borders around the table */
   border-collapse: collapse; /* Collapses borders so adjacent cells share borders */
   table-layout: auto; /* Allows automatic table layout (based on content) */
-  line-height: 3.0; /* Example line height for report tables */
 }
 
 /* Styling for elements with focus */
@@ -60,8 +59,7 @@
   font-family: 'Open Sans', sans-serif; /* Updated font family */
   border: 1px solid #cccccc; /* Light gray border around the table */
   border-collapse: collapse; /* Borders between table cells are collapsed */
-  border-spacing: 3px; /* Sets the space between table cells */
-  line-height: 1.1
+  border-spacing: 2px; /* Sets the space between table cells */
 }
 
 /* Styling for the table header cells inside reportTable */
