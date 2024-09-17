@@ -9,206 +9,128 @@
     format('woff2');
 }
 
+/* Tooltip styling used to display small pop-up messages when elements are hovered */
 #tooltip {
-  position: absolute;
-  width: auto;
-  height: auto;
-  padding: 5px;
-  background-color: #ffcccc; /* Light red */
-  border-radius: 4px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  font-family: sans-serif;
-  font-size: 12px;
-  z-index: 2;
+  position: absolute; /* Positions the tooltip relative to the document, allowing it to appear anywhere */
+  width: auto; /* Automatically adjusts the width of the tooltip to fit content */
+  height: auto; /* Automatically adjusts the height of the tooltip based on content */
+  padding: 5px; /* Adds 5px of padding inside the tooltip for spacing */
+  background-color: #ffcccc; /* Sets a light red background color to make the tooltip stand out */
+  border-radius: 4px; /* Rounds the corners of the tooltip to 4px for a smoother appearance */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Adds a shadow for depth, giving the tooltip a floating effect */
+  pointer-events: none; /* Prevents the tooltip from interfering with other interactive elements */
+  font-family: sans-serif; /* Uses a clean sans-serif font for readability */
+  font-size: 12px; /* Ensures the tooltip text is legible without being too large */
+  z-index: 2; /* Positions the tooltip above other elements */
 }
 
+/* Table style for displaying the tooltip content */
 .tooltipTable {
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
-  border: 0px;
-  border-collapse: collapse;
-  table-layout: auto;
-  background-color: #ffffcc; /* Light yellow */
+  font-family: Open Sans, Helvetica, Arial, sans-serif; /* Ensures the table uses a consistent sans-serif font */
+  border: 0px; /* Removes the border around the table */
+  border-collapse: collapse; /* Collapses the table borders for a cleaner appearance */
+  table-layout: auto; /* Automatically adjusts the table layout based on content */
 }
 
+/* Highlighting elements when focused */
 .focus {
-  font-weight: bold;
-  background-color: #ccffcc; /* Light green */
+  font-weight: bold; /* Makes the text bold to emphasize the focused element */
+  background-color: #ccffcc; /* Sets a light green background to further highlight the focus */
 }
 
+/* Hides elements with the "hidden" class */
 .hidden {
-  display: none;
-  background-color: #ccccff; /* Light purple */
+  display: none; /* Completely hides the element from view and removes it from the layout */
 }
 
+/* Hover effect for elements to change background color when hovered */
 .hover {
-  background-color: #ffffbb;
+  background-color: #ffffbb; /* Changes background to a light yellow when hovered */
 }
 
+/* Main table styling for displaying report data */
 .reportTable {
-  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC,
-    sans-serif;
-  color: #696969;
-  border-collapse: collapse;
-  border-spacing: 3px;
-  table-layout: fixed;
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif; /* Uses a consistent font for readability */
+  color: #696969; /* Sets the text color to a dark gray for good contrast */
+  border-collapse: collapse; /* Collapses the borders of the table cells into a single border */
+  border-spacing: 3px; /* Adds 3px of space between table cells for better readability */
+  table-layout: fixed; /* Fixes the table layout to ensure uniform column widths */
 }
 
-/* Alternierende Farben nur für Measures und letzte Dimension */
+/* Alternating background colors for odd and even rows in the Measures and last dimension column */
 .reportTable tr:nth-child(odd) td.measure,
 .reportTable tr:nth-child(odd) td:last-child {
-  background-color: #ffccff !important; /* Light pink for odd rows */
+  background-color: #ffccff !important; /* Light pink background for odd rows in Measures and last dimension */
 }
 
 .reportTable tr:nth-child(even) td.measure,
 .reportTable tr:nth-child(even) td:last-child {
-  background-color: #ff99cc !important; /* Darker pink for even rows */
+  background-color: #ff99cc !important; /* Darker pink background for even rows in Measures and last dimension */
 }
 
-/* Einheitliche Farben für alle anderen Dimensionen */
+/* Sets uniform background color for all other dimension columns */
 .reportTable td.dimension {
-  background-color: #ffffff !important; /* Einheitliches Weiß */
+  background-color: #ffffff !important; /* Ensures all dimension columns (except the last one) are white */
 }
 
-/* Alternierung der letzten Dimension nur */
-.reportTable tr:nth-child(odd) td:last-child {
-  background-color: #ffccff !important; /* Pink für ungerade Zeilen (letzte Dimension) */
-}
-
-.reportTable tr:nth-child(even) td:last-child {
-  background-color: #ff99cc !important; /* Pink für gerade Zeilen (letzte Dimension) */
-}
-
+/* Sets the header styling for all table header cells */
 th.headerCell {
-  background-color: #ccd8e4;
-  padding: 5px;
-  border-bottom: 1px solid #bdc3c7;
+  background-color: #ccd8e4; /* Sets a light blue background for header cells */
+  padding: 5px; /* Adds 5px padding inside header cells for spacing */
+  border-bottom: 1px solid #bdc3c7; /* Adds a light gray bottom border for header cell separation */
 }
 
+/* Specific styling for dimension headers */
 .headerCell.dimension {
-  background-color: #e4ecf3;
-  border-right: 1px solid #bdc3c7;
+  background-color: #e4ecf3; /* Sets a slightly lighter blue for dimension headers */
+  border-right: 1px solid #bdc3c7; /* Adds a light gray right border for column separation */
 }
 
+/* Specific styling for pivot headers */
 .headerCell.pivot {
-  background-color: #ccd8e4;
-  border-right: 1px solid #bdc3c7;
+  background-color: #ccd8e4; /* Uses the same background as main headers */
+  border-right: 1px solid #bdc3c7; /* Adds a light gray right border for pivot column separation */
 }
 
+/* Specific styling for measure headers */
 .headerCell.measure {
-  background-color: #e4d0bd;
-  border-left: 1px solid #bdc3c7;
+  background-color: #e4d0bd; /* Sets a beige background for measure headers */
+  border-left: 1px solid #bdc3c7; /* Adds a light gray left border to separate the measure headers */
 }
 
+/* Styling for calculation measure headers */
 .headerCell.measure.calculation {
-  background-color: #c9dfc5;
-  border-left: 1px solid #bdc3c7;
+  background-color: #c9dfc5; /* Sets a light green background for calculation measure headers */
+  border-left: 1px solid #bdc3c7; /* Adds a light gray left border to separate calculation headers */
 }
 
-.headerCell.transposed.dimension {
-  background-color: #ffcc99;
-}
-
-.headerCell.transposed.dimension.merged {
-  background-color: #ff9966 !important;
-}
-
+/* Styles for individual table cells */
 .rowCell {
-  vertical-align: super;
-  padding-left: 5px;
-  border-bottom: 1px solid #bdc3c7;
+  vertical-align: super; /* Aligns content towards the top of the cell */
+  padding-left: 5px; /* Adds 5px of left padding for cell content spacing */
+  border-bottom: 1px solid #bdc3c7; /* Adds a light gray bottom border to separate rows */
 }
 
+/* Ensures merged cells inherit the background color of their row */
 .rowCell.merged {
-  background-color: inherit !important;
+  background-color: inherit !important; /* Makes sure merged cells use the same background as the row */
 }
 
-.indexCell.transposed {
-  font-weight: bold;
-  background-color: #ffcccc;
-}
-
-.indexCell.transposed.pivot {
-  background-color: #ffcc99;
-}
-
-.indexCell.transposed.dimension {
-  background-color: #ffcc66;
-}
-
-.indexCell.transposed.measure {
-  background-color: #e4d0bd;
-}
-
-.indexCell.transposed.calculation {
-  background-color: #c9dfc5;
-}
-
-.indexCell.transposed.pivot.merged {
-  background-color: #ff9966 !important;
-}
-
-.indexCell.transposed.dimension.merged {
-  background-color: #ffcc33 !important;
-}
-
-.indexCell.transposed.measure.merged {
-  background-color: inherit !important;
-}
-
-.indexCell.transposed.calculation.merged {
-  background-color: inherit !important;
-}
-
-.nonNumeric {
-  text-align: left;
-  background-color: #ccccff;
-}
-
-.numeric {
-  text-align: right;
-  background-color: #ffcccc;
-}
-
-.negative {
-  color: red;
-  background-color: #ffcccc;
-}
-
-.estimate {
-  color: darkgray !important;
-  background-color: #ffccff;
-}
-
-.singleIndex {
-  padding-left: 15px !important;
-}
-
-.subtotal {
-  font-style: italic;
-  font-weight: bold;
-  background: #d3d3d3;
-}
-
-.total {
-  border-top: 2px solid #696969 !important;
-  font-weight: bold !important;
-  background-color: #ffffcc;
-}
-
-.total.transposed {
-  border-top: 0px !important;
-  background: #d3d3d3;
-}
-
-/* Hover-Effekt für Zeilen */
+/* Hover effect for entire table rows */
 .reportTable tr:hover td,
 .reportTable th:hover {
-  background-color: rgba(153, 204, 255, 0.7) !important;
+  background-color: royalblue !important; /* Changes the background color of the entire row to royal blue when hovered */
 }
 
-/* Spaltenhover: Jede Zelle in der gleichen Spalte hervorheben */
+/* Hover effect for entire columns, highlighting the column when a cell is hovered */
 .reportTable td:hover,
 .reportTable td:nth-child(hover) {
-  background-color: #ccff99 !important;
+  background-color: royalblue !important; /* Highlights the column with a royal blue background when a cell is hovered */
+}
+
+/* This rule applies to the "total" rows, which summarize or aggregate data */
+.total {
+  border-top: 2px solid #696969 !important; /* Adds a 2px solid dark gray top border to visually separate the total row */
+  font-weight: bold !important; /* Makes the text bold to emphasize that this is an important row */
+  background-color: #ffffcc; /* Sets a light yellow background for the total row to make it stand out */
 }
