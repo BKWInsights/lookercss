@@ -14,13 +14,13 @@
   width: auto;
   height: auto;
   padding: 5px;
-  background-color: white;
+  background-color: yellow; /* Gelb für Tooltip-Hintergrund */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4); /* Blauer Schatten */
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4);
   pointer-events: none;
   font-family: sans-serif;
   font-size: 12px;
@@ -36,6 +36,7 @@
 
 .focus {
   font-weight: bold;
+  color: red; /* Rot für fokussierten Text */
 }
 
 .hidden {
@@ -43,77 +44,123 @@
 }
 
 .hover {
-  background-color: #ffffbb;
+  background-color: #ffffbb; /* Hellgelber Hover-Effekt */
 }
 
 .reportTable {
   font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC,
     sans-serif;
-  border-collapse: separate;
+  color: purple; /* Lila Textfarbe für Tabelle */
+  border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
 }
 
-/* Alternierende Zeilenfarben hinzufügen */
+/* Alternierende Zeilenfarben */
 .reportTable tr:nth-child(even) {
-  background-color: #f0f0f0; /* Helle graue Farbe für gerade Zeilen */
+  background-color: lightgreen; /* Hellgrün für gerade Zeilen */
 }
 
 .reportTable tr:nth-child(odd) {
-  background-color: #ffffff; /* Weiße Farbe für ungerade Zeilen */
+  background-color: lightblue; /* Hellblau für ungerade Zeilen */
 }
 
 th.headerCell {
-  border-bottom: 1px solid #000000 !important;
-  font-weight: bold;
+  background-color: orange; /* Orange für Header-Hintergrund */
   padding: 5px;
+  border-bottom: 1px solid green; /* Grüne untere Grenze */
 }
 
-.headerCell.merged {
-  text-align: center !important;
-  background-color: #ffffff !important;
+.headerCell.dimension {
+  background-color: pink; /* Pink für Dimensions-Header */
+  border-right: 1px solid blue; /* Blaue rechte Grenze */
+}
+
+.headerCell.pivot {
+  background-color: cyan; /* Cyan für Pivot-Header */
+  border-right: 1px solid black; /* Schwarze rechte Grenze */
+}
+
+.headerCell.measure {
+  background-color: brown; /* Braun für Measures-Header */
+  border-left: 1px solid red; /* Rote linke Grenze */
+}
+
+.headerCell.measure.calculation {
+  background-color: violet; /* Violett für Berechnungs-Measures */
+  border-left: 1px solid darkblue; /* Dunkelblaue linke Grenze */
+}
+
+.headerCell.transposed.dimension {
+  background-color: magenta; /* Magenta für transponierte Dimension */
 }
 
 .headerCell.transposed.dimension.merged {
-  text-align: center !important;
-  background-color: #ffffff !important;
+  background-color: teal !important; /* Teal für transponierte, zusammengeführte Dimensionen */
+}
+
+.rowCell {
+  vertical-align: super;
+  padding-left: 5px;
+  border-bottom: 1px solid lime; /* Limettengrüne untere Grenze für Zellen */
+}
+
+.rowCell.merged {
+  background-color: white !important;
 }
 
 .indexCell.transposed {
   font-weight: bold;
 }
 
-.indexCell.transposed.merged {
-  background-color: #ffffff !important;
+.indexCell.transposed.pivot {
+  background-color: yellow; /* Gelb für transponierte Pivot-Zellen */
 }
 
-.rowCell {
-  vertical-align: super;
-  padding-left: 5px;
+.indexCell.transposed.dimension {
+  background-color: silver; /* Silber für transponierte Dimensions-Zellen */
 }
 
-.rowCell.merged {
-  background-color: #ffffff !important;
+.indexCell.transposed.measure {
+  background-color: lightcoral; /* Korallenrot für transponierte Measures */
 }
 
-.rowCell.transposed.dimension.merged {
-  background-color: #ffffff !important;
+.indexCell.transposed.calculation {
+  background-color: lightseagreen; /* Seegrün für transponierte Berechnungen */
+}
+
+.indexCell.transposed.pivot.merged {
+  background-color: lightyellow !important; /* Hellgelb für zusammengeführte transponierte Pivots */
+}
+
+.indexCell.transposed.dimension.merged {
+  background-color: lightpink !important; /* Hellrosa für zusammengeführte transponierte Dimensionen */
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: lightgoldenrodyellow !important; /* Hellgold für zusammengeführte transponierte Measures */
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: lightgreen !important; /* Hellgrün für zusammengeführte Berechnungen */
 }
 
 .nonNumeric {
   text-align: left;
+  color: blue; /* Blau für nicht-numerische Zellen */
 }
 
 .numeric {
   text-align: right;
+  color: red; /* Rot für numerische Zellen */
 }
 
 .negative {
-  color: red;
+  color: red; /* Rot für negative Werte */
 }
 
 .estimate {
-  color: darkgray !important;
+  color: darkgray !important; /* Dunkelgrau für Schätzwerte */
 }
 
 .singleIndex {
@@ -122,37 +169,23 @@ th.headerCell {
 
 .subtotal {
   font-style: italic;
-  font-weight: bold !important;
+  font-weight: bold;
+  background: navy; /* Dunkelblau für Zwischensummen */
+  color: white; /* Weiße Schrift für Zwischensummen */
 }
 
 .total {
-  border-top: 2px solid #000000;
+  border-top: 2px solid black !important;
   font-weight: bold !important;
+  background: gray; /* Grauer Hintergrund für Gesamtsummen */
 }
 
 .total.transposed {
   border-top: 0px !important;
-}
-
-.dimension.transposed {
-  font-weight: bold;
+  background: darkgray; /* Dunkelgrau für transponierte Gesamtsummen */
 }
 
 .rectElem.animated {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
-  padding: 4px;
-}
-
-.headerCell.animated {
-  border-bottom: 4px solid #ffffff;
-  box-shadow: inset 0px -1px 0px 0px #000000 !important;
-  font-weight: bold;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-/* Spalten- und Zeilenhover */
-.reportTable td:hover,
-.reportTable th:hover {
-  background-color: #ffffbb !important; /* Hover-Effekt für Zellen und Header */
+  margin: 4px;
 }
