@@ -162,14 +162,4 @@ table.reportTable td:hover ~ td {
   background: #f5f5f5; /* Light gray background */
 }
 
-/* Special case for transposed total rows */
-.total.transposed {
-  border-top: 0px !important; /* No top border */
-  background: #d3d3d3; /* Light gray background */
-}
-
-/* Styling for animated rectangular elements */
-.rectElem.animated {
-  font-family: 'Open Sans', sans-serif; /* Updated font family */
-  margin: 4px; /* Margin around the rectangular element */
-}
+/* Special case for transposed
