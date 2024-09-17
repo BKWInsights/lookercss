@@ -99,8 +99,23 @@ th.headerCell {
   border-bottom: 1px solid #bdc3c7;
 }
 
+/* Apply alternating row colors */
+.reportTable tr:nth-child(odd) {
+  background-color: #ffccff; /* Light pink */
+}
+
+.reportTable tr:nth-child(even) {
+  background-color: #ff99cc; /* Darker pink */
+}
+
+/* Hover effect without overriding alternating row colors */
+.reportTable tr:hover {
+  background-color: rgba(153, 204, 255, 0.7); /* Semi-transparent light blue */
+}
+
+/* Ensure merged cells still alternate */
 .rowCell.merged {
-  background-color: #ccffcc !important; /* Light green */
+  background-color: inherit !important;
 }
 
 .indexCell.transposed {
@@ -133,11 +148,11 @@ th.headerCell {
 }
 
 .indexCell.transposed.measure.merged {
-  background-color: #e4d0bd !important; /* Beige */
+  background-color: inherit !important;
 }
 
 .indexCell.transposed.calculation.merged {
-  background-color: #c9dfc5 !important; /* Light green */
+  background-color: inherit !important;
 }
 
 .nonNumeric {
@@ -182,48 +197,8 @@ th.headerCell {
   background: #d3d3d3;
 }
 
-/* Alternating row colors */
-.reportTable tr:nth-child(odd) {
-  background-color: #ffccff; /* Light pink */
-}
-
-.reportTable tr:nth-child(even) {
-  background-color: #ff99cc; /* Pink */
-}
-
-/* Hover effect should not override the alternating row colors */
-.reportTable tr:hover {
-  background-color: rgba(153, 204, 255, 0.5); /* Semi-transparent blue to keep alternating colors visible */
-}
-
-/* Ensure merged cells still alternate */
-.rowCell.merged.measure:nth-child(odd) {
-  background-color: #ffccff !important; /* Light pink */
-}
-
-.rowCell.merged.measure:nth-child(even) {
-  background-color: #ff99cc !important; /* Pink */
-}
-
-/* Column hover */
+/* Column hover effect */
 .reportTable td:hover,
 .reportTable th:hover {
   background-color: #ccff99 !important; /* Light green for column hover */
-}
-
-/* For transposed tables, alternate measure rows */
-.indexCell.transposed.measure:nth-child(odd) {
-  background-color: #ffccff;
-}
-
-.indexCell.transposed.measure:nth-child(even) {
-  background-color: #ff99cc;
-}
-
-.indexCell.transposed.measure.merged:nth-child(odd) {
-  background-color: #ffccff !important;
-}
-
-.indexCell.transposed.measure.merged:nth-child(even) {
-  background-color: #ff99cc !important;
 }
