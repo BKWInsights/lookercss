@@ -190,3 +190,38 @@ th.headerCell {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   margin: 4px;
 }
+
+/* Alternating row colors for measure rows */
+.rowCell.measure:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.rowCell.measure:nth-child(even) {
+  background-color: #e4d0bd;
+}
+
+/* Ensure merged cells still alternate */
+.rowCell.merged.measure:nth-child(odd) {
+  background-color: #f9f9f9 !important;
+}
+
+.rowCell.merged.measure:nth-child(even) {
+  background-color: #e4d0bd !important;
+}
+
+/* For transposed tables, alternate measure rows */
+.indexCell.transposed.measure:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.indexCell.transposed.measure:nth-child(even) {
+  background-color: #e4d0bd;
+}
+
+.indexCell.transposed.measure.merged:nth-child(odd) {
+  background-color: #f9f9f9 !important;
+}
+
+.indexCell.transposed.measure.merged:nth-child(even) {
+  background-color: #e4d0bd !important;
+}
