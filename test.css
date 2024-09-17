@@ -183,7 +183,7 @@ th.headerCell {
   background: #d3d3d3;
 }
 
-/* Alternating row colors for the entire table */
+/* Alternating row colors */
 .reportTable tr:nth-child(odd) {
   background-color: #ffccff; /* Light pink */
 }
@@ -192,9 +192,9 @@ th.headerCell {
   background-color: #ff99cc; /* Pink */
 }
 
-/* Hover effect on the entire row */
+/* Hover effect on the entire row (separate from alternating colors) */
 .reportTable tr:hover {
-  background-color: #99ccff !important; /* Light blue */
+  background-color: rgba(153, 204, 255, 0.7) !important; /* Semi-transparent light blue */
 }
 
 /* Ensure merged cells still alternate */
@@ -210,15 +210,6 @@ th.headerCell {
 .reportTable td:hover,
 .reportTable th:hover {
   background-color: #ccff99 !important; /* Light green for column hover */
-}
-
-/* Maintain alternating colors when hovering */
-.reportTable tr:nth-child(odd):hover {
-  background-color: #99ccff !important;
-}
-
-.reportTable tr:nth-child(even):hover {
-  background-color: #99ccff !important;
 }
 
 /* For transposed tables, alternate measure rows */
