@@ -92,10 +92,16 @@ table.reportTable th:hover {
   background-color: pink !important; /* Pink background for header when hovered */
 }
 
-/* Column hover effect */
+/* Hover effect for column cells */
 table.reportTable td:hover,
 table.reportTable td:hover ~ td {
-  background-color: royalblue !important; /* Royal blue for column hover */
+  background-color: cyan !important; /* Cyan for column hover */
+}
+
+/* Synchronize header hover with column hover */
+table.reportTable th:hover,
+table.reportTable td:hover ~ th {
+  background-color: pink !important; /* Pink header when column is hovered */
 }
 
 /* Specific styles for row cells */
