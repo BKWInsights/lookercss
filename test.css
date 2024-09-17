@@ -66,13 +66,13 @@
 table.reportTable th {
   border: 1px solid #cccccc; /* Light gray border around header cells */
   border-bottom: 1px solid #000000 !important; /* Force black bottom border for header cells */
-  padding: 5px; /* Padding inside header cells */
+  padding: 3px; /* Padding inside header cells */
 }
 
 /* Styling for data cells in the reportTable */
 table.reportTable td {
   vertical-align: super; /* Aligns the content at the top of the cell */
-  padding: 5px; /* Padding inside data cells */
+  padding: 3px; /* Padding inside data cells */
   border: 1px solid #cccccc; /* Light gray border around data cells */
   border-collapse: collapse; /* Collapses borders with adjacent cells */
 }
@@ -81,7 +81,7 @@ table.reportTable td {
 .headerCell {
   border-bottom: 1px solid #000000 !important; /* Black bottom border */
   font-weight: bold; /* Make text bold */
-  padding: 5px; /* Padding inside header cells */
+  padding: 3px; /* Padding inside header cells */
 }
 
 /* Styling for index cells that are transposed */
@@ -91,7 +91,7 @@ table.reportTable td {
 
 /* Merged index cells should have a white background */
 .indexCell.transposed.merged {
-  background-color: #ffffff !important; /* Force white background for merged cells */
+  background-color: #f5f5f5 !important; /* Force white background for merged cells */
 }
 
 /* Row cell specific styling */
@@ -112,7 +112,7 @@ table.reportTable td {
 
 /* Make negative values appear in red */
 .negative {
-  color: red; /* Text color is red for negative values */
+  color: blue; /* Text color is red for negative values */
 }
 
 /* Styling for estimated values */
