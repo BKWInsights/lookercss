@@ -13,7 +13,7 @@
   width: auto; /* Width will automatically adapt to content */
   height: auto; /* Height will also adapt automatically to the content */
   padding: 5px; /* Padding inside the tooltip box for some spacing */
-  background-color: yellow; /* Tooltip background color is yellow */
+  background-color: black; /* Tooltip background color is black */
 
   /* Define the border radius to create rounded corners for the tooltip */
   -webkit-border-radius: 4px; /* For older versions of Safari */
@@ -21,9 +21,9 @@
   border-radius: 4px; /* Modern standard for rounded corners */
 
   /* Apply shadow around the tooltip for a floating effect */
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4); /* Blue shadow */
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4);
-  box-shadow: 4px 4px 10px rgba(0, 0, 255, 0.4); /* Blue shadow for modern browsers */
+  -webkit-box-shadow: 4px 4px 10px rgba(255, 0, 0, 0.4); /* Red shadow */
+  -moz-box-shadow: 4px 4px 10px rgba(255, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(255, 0, 0, 0.4); /* Red shadow for modern browsers */
 
   pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
   font-family: 'Open Sans', sans-serif; /* Set the tooltip font */
@@ -52,59 +52,59 @@
 
 /* Styling for elements when hovered over */
 .hover {
-  background-color: lightgreen; /* Light green background color when hovered */
+  background-color: limegreen; /* Lime green background color when hovered */
 }
 
 /* Styles for a report table */
 .reportTable {
-  font-family: 'Open Sans', sans-serif; /* Set the table's font family */
-  border: 1px solid blue; /* Blue border around the table */
+  font-family: 'Open Sans', sans-serif; /* Ensures the table uses Open Sans font */
+  border: 1px solid black; /* Black border around the table */
   border-collapse: collapse; /* Borders between table cells are collapsed into one */
   border-spacing: 2px; /* Sets the space between table cells */
 }
 
 /* Styling for table header cells */
 table.reportTable th {
-  border: 1px solid green; /* Green border around header cells */
+  border: 1px solid blue; /* Blue border around header cells */
   border-bottom: 1px solid purple !important; /* Purple bottom border for header cells */
   padding: 3px; /* Padding inside the header cells */
-  background-color: lightyellow; /* Light yellow background for header cells */
+  background-color: darkorange; /* Dark orange background for header cells */
 }
 
 /* Styling for data cells inside the report table */
 table.reportTable td {
   vertical-align: super; /* Aligns the content towards the top of the cell */
   padding: 3px; /* Padding inside data cells */
-  border: 1px solid orange; /* Orange border around data cells */
+  border: 1px solid darkgreen; /* Dark green border around data cells */
   border-collapse: collapse; /* Collapses borders between adjacent cells */
 }
 
 /* Alternating background colors for even and odd rows in the last dimension and numeric columns */
 table.reportTable tr:nth-child(even) td:last-child,
 table.reportTable tr:nth-child(even) td.numeric {
-  background-color: lightblue; /* Light blue background for even rows in the last dimension and numeric values */
+  background-color: yellow; /* Yellow background for even rows in the last dimension and numeric values */
 }
 
 table.reportTable tr:nth-child(odd) td:last-child,
 table.reportTable tr:nth-child(odd) td.numeric {
-  background-color: lightpink; /* Light pink background for odd rows in the last dimension and numeric values */
+  background-color: magenta; /* Magenta background for odd rows in the last dimension and numeric values */
 }
 
-/* Hover effect for entire row: royal blue color over all cells, overriding alternating background */
+/* Hover effect for entire row: cyan color over all cells, overriding alternating background */
 table.reportTable tr:hover td {
-  background-color: royalblue !important; /* Royal blue background when hovering over the row */
+  background-color: cyan !important; /* Cyan background when hovering over the row */
 }
 
 /* Spaltenhover: Überdeckt die alternierenden Hintergrundfarben und synchronisiert den Header */
 table.reportTable td:hover,
 table.reportTable td:hover ~ td {
-  background-color: lightcoral !important; /* Light coral for column hover, with higher priority */
+  background-color: red !important; /* Red for column hover, with higher priority */
 }
 
 /* Applies hover effect to the header when a column is hovered */
 table.reportTable td:hover::before,
 table.reportTable th:hover {
-  background-color: lightcoral !important; /* Light coral for the header of the hovered column */
+  background-color: red !important; /* Red for the header of the hovered column */
 }
 
 /* Special class for header cells with specific styles */
@@ -112,13 +112,13 @@ table.reportTable th:hover {
   border-bottom: 1px solid purple !important; /* Purple bottom border for header cells */
   font-weight: bold; /* Makes the header text bold */
   padding: 3px; /* Padding inside the header cells */
-  background-color: lightyellow; /* Light yellow background for header cells */
+  background-color: darkorange; /* Dark orange background for header cells */
 }
 
 /* Styling for transposed index cells (rotated or swapped) */
 .indexCell.transposed {
   font-weight: bold; /* Makes transposed index cell text bold */
-  background-color: lightcyan; /* Light cyan background for transposed index cells */
+  background-color: brown; /* Brown background for transposed index cells */
 }
 
 /* Ensures merged index cells have a white background */
@@ -130,19 +130,19 @@ table.reportTable th:hover {
 .rowCell {
   vertical-align: super; /* Aligns content towards the top of the cell */
   padding-left: 5px; /* Adds padding to the left side of the cell */
-  background-color: lightgray; /* Light gray background for row cells */
+  background-color: darkgray; /* Dark gray background for row cells */
 }
 
 /* Left-align text for non-numeric values */
 .nonNumeric {
   text-align: left; /* Left-aligns non-numeric content */
-  background-color: lightcyan; /* Light cyan background for non-numeric cells */
+  background-color: violet; /* Violet background for non-numeric cells */
 }
 
 /* Right-align text for numeric values */
 .numeric {
   text-align: right; /* Right-aligns numeric content */
-  background-color: lightgreen; /* Light green background for numeric cells */
+  background-color: darkred; /* Dark red background for numeric cells */
 }
 
 /* Styles negative values in blue */
@@ -158,14 +158,14 @@ table.reportTable th:hover {
 /* Adds extra left padding for single-index cells */
 .singleIndex {
   padding-left: 15px !important; /* Extra left padding for single-index cells */
-  background-color: lightcoral; /* Light coral background for single-index cells */
+  background-color: blue; /* Blue background for single-index cells */
 }
 
 /* Styling for subtotal rows */
 .subtotal {
   font-style: normal; /* Normal font style for subtotal rows */
   font-weight: normal; /* Normal font weight */
-  background: lightgoldenrodyellow; /* Light goldenrod yellow background for subtotal rows */
+  background: turquoise; /* Turquoise background for subtotal rows */
 }
 
 /* Styling for total rows */
@@ -173,18 +173,18 @@ table.reportTable th:hover {
   border-top: 2px solid brown !important; /* Brown top border for total rows */
   font-weight: bold !important; /* Makes the text bold */
   font-style: normal; /* Normal font style */
-  background: lightgray; /* Light gray background for total rows */
+  background: darkblue; /* Dark blue background for total rows */
 }
 
 /* Special case for transposed total rows */
 .total.transposed {
   border-top: 0px !important; /* Removes the top border */
-  background: lightgray; /* Light gray background for transposed total rows */
+  background: darkblue; /* Dark blue background for transposed total rows */
 }
 
 /* Styling for animated rectangular elements */
 .rectElem.animated {
   font-family: 'Open Sans', sans-serif; /* Ensures the rectangular element uses the Open Sans font */
   margin: 4px; /* Adds 4px margin around the rectangular element */
-  background-color: lavender; /* Lavender background for rectangular elements */
+  background-color: darkkhaki; /* Dark khaki background for rectangular elements */
 }
