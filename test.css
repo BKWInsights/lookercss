@@ -116,7 +116,7 @@ th.headerCell {
   background-color: inherit !important; /* Makes sure merged cells use the same background as the row */
 }
 
-/* Hover effect for entire table rows */
+/* Hover effect for entire table rows, overriding any alternating row colors */
 .reportTable tr:hover td,
 .reportTable th:hover {
   background-color: royalblue !important; /* Ensures the entire row turns royal blue when hovered, overriding alternating row colors */
@@ -128,9 +128,9 @@ th.headerCell {
   background-color: royalblue !important; /* Ensures the entire column turns royal blue when hovered, overriding alternating column colors */
 }
 
-/* Styling to ensure the cursor changes to a pointer (hand) when hovering over links */
-a {
-  cursor: pointer !important; /* Ensures the cursor turns into a "pointer" (hand icon) when hovering over links */
+/* Ensures links inside the table show the hand (pointer) cursor */
+.reportTable a {
+  cursor: pointer !important; /* Changes the cursor to a hand when hovering over links inside the table */
 }
 
 /* This rule applies to the "total" rows, which summarize or aggregate data */
