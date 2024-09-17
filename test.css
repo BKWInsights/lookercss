@@ -77,15 +77,15 @@ table.reportTable td {
   border-collapse: collapse; /* Collapses borders with adjacent cells */
 }
 
-/* Alternierende Zeilenfarben nur für die letzte Dimension und alle numerischen Zellen */
-table.reportTable td:last-child:nth-child(even),
-table.reportTable td.numeric:nth-child(even) {
-  background-color: #f5f5f5; /* Hellgrau für gerade Zeilen der letzten Dimension und numerische Werte */
+/* Alternierende Zeilenfarben ab der letzten Dimension nach rechts */
+table.reportTable tr:nth-child(even) td:nth-last-child(-n+2), /* Letzten 2 Spalten */
+table.reportTable tr:nth-child(even) td.numeric {
+  background-color: #f5f5f5; /* Hellgrau für gerade Zeilen */
 }
 
-table.reportTable td:last-child:nth-child(odd),
-table.reportTable td.numeric:nth-child(odd) {
-  background-color: #ffffff; /* Weiß für ungerade Zeilen der letzten Dimension und numerische Werte */
+table.reportTable tr:nth-child(odd) td:nth-last-child(-n+2), /* Letzten 2 Spalten */
+table.reportTable tr:nth-child(odd) td.numeric {
+  background-color: #ffffff; /* Weiß für ungerade Zeilen */
 }
 
 /* Special class for header cells */
@@ -148,7 +148,7 @@ table.reportTable td.numeric:nth-child(odd) {
   border-top: 2px solid #000000 !important; /* Thick black top border */
   font-weight: bold !important; /* Force bold text */
   font-style: normal; /* Italic font style */
-  background: #f5f5f5; /* Light gray background */
+   background: #f5f5f5; /* Light gray background */
 }
 
 /* Special case for transposed total rows */
