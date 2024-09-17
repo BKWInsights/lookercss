@@ -54,15 +54,15 @@
   table-layout: fixed;
 }
 
-/* Alternierung nur für Measures und letzte Dimension */
-.reportTable td.measure:nth-child(odd),
-.reportTable td:last-child:nth-child(odd) {
-  background-color: #ffccff !important; /* Light pink */
+/* Alternierende Farben nur für Measures und letzte Dimension (Zeilenweise) */
+.reportTable tr:nth-child(odd) td.measure,
+.reportTable tr:nth-child(odd) td:last-child {
+  background-color: #ffccff !important; /* Light pink for odd rows */
 }
 
-.reportTable td.measure:nth-child(even),
-.reportTable td:last-child:nth-child(even) {
-  background-color: #ff99cc !important; /* Darker pink */
+.reportTable tr:nth-child(even) td.measure,
+.reportTable tr:nth-child(even) td:last-child {
+  background-color: #ff99cc !important; /* Darker pink for even rows */
 }
 
 th.headerCell {
