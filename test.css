@@ -65,6 +65,15 @@
   background-color: #ff99cc !important; /* Darker pink for even rows */
 }
 
+/* Standard-Hintergrundfarben für alle Dimensionen */
+.reportTable td.dimension {
+  background-color: #ffffff !important; /* Weiß für alle Dimensionen */
+}
+
+.reportTable tr:nth-child(even) td.dimension {
+  background-color: #f0f0f0 !important; /* Hellgrau für gerade Zeilen-Dimensionen */
+}
+
 th.headerCell {
   background-color: #ccd8e4;
   padding: 5px;
