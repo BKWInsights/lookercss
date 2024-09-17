@@ -54,7 +54,7 @@
   table-layout: fixed;
 }
 
-/* Alternierende Farben nur für Measures und letzte Dimension (Zeilenweise) */
+/* Alternierende Farben nur für Measures und letzte Dimension */
 .reportTable tr:nth-child(odd) td.measure,
 .reportTable tr:nth-child(odd) td:last-child {
   background-color: #ffccff !important; /* Light pink for odd rows */
@@ -65,13 +65,18 @@
   background-color: #ff99cc !important; /* Darker pink for even rows */
 }
 
-/* Standard-Hintergrundfarben für alle Dimensionen */
+/* Einheitliche Farben für alle anderen Dimensionen */
 .reportTable td.dimension {
-  background-color: #ffffff !important; /* Weiß für alle Dimensionen */
+  background-color: #ffffff !important; /* Einheitliches Weiß */
 }
 
-.reportTable tr:nth-child(even) td.dimension {
-  background-color: #f0f0f0 !important; /* Hellgrau für gerade Zeilen-Dimensionen */
+/* Alternierung der letzten Dimension nur */
+.reportTable tr:nth-child(odd) td:last-child {
+  background-color: #ffccff !important; /* Pink für ungerade Zeilen (letzte Dimension) */
+}
+
+.reportTable tr:nth-child(even) td:last-child {
+  background-color: #ff99cc !important; /* Pink für gerade Zeilen (letzte Dimension) */
 }
 
 th.headerCell {
