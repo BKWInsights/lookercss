@@ -97,7 +97,6 @@ th.headerCell {
   vertical-align: super;
   padding-left: 5px;
   border-bottom: 1px solid #bdc3c7;
-  background-color: #e6ffcc; /* Light green */
 }
 
 .rowCell.merged {
@@ -192,9 +191,9 @@ th.headerCell {
   background-color: #ff99cc; /* Pink */
 }
 
-/* Hover effect on the entire row (separate from alternating colors) */
+/* Hover effect should not override the alternating row colors */
 .reportTable tr:hover {
-  background-color: rgba(153, 204, 255, 0.7) !important; /* Semi-transparent light blue */
+  background-color: rgba(153, 204, 255, 0.5); /* Semi-transparent blue to keep alternating colors visible */
 }
 
 /* Ensure merged cells still alternate */
