@@ -127,9 +127,9 @@ table.reportTable td {
 
 /* Styling for subtotal rows */
 .subtotal {
-  font-style: italic; /* Italic font style */
+  font-style: normal; /* Italic font style */
   font-weight: bold; /* Bold text */
-  background: #d3d3d3; /* Light gray background */
+  background: #ffffff; /* Light gray background */
 }
 
 /* Styling for total rows */
