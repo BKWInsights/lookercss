@@ -13,7 +13,7 @@
   width: auto; /* Width will automatically adapt to content */
   height: auto; /* Height will also adapt automatically to the content */
   padding: 5px; /* Padding inside the tooltip box */
-  background-color: white; /* Tooltip background color is white */
+  background-color: blue; /* Tooltip background color is white */
   
   /* Define the border radius to create rounded corners for the tooltip */
   -webkit-border-radius: 4px; /* For older versions of Safari */
