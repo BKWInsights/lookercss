@@ -119,13 +119,18 @@ th.headerCell {
 /* Hover effect for entire table rows */
 .reportTable tr:hover td,
 .reportTable th:hover {
-  background-color: royalblue !important; /* Changes the background color of the entire row to royal blue when hovered */
+  background-color: royalblue !important; /* Ensures the entire row turns royal blue when hovered, overriding alternating row colors */
 }
 
 /* Hover effect for entire columns, highlighting the column when a cell is hovered */
 .reportTable td:hover,
 .reportTable td:nth-child(hover) {
-  background-color: royalblue !important; /* Highlights the column with a royal blue background when a cell is hovered */
+  background-color: royalblue !important; /* Ensures the entire column turns royal blue when hovered, overriding alternating column colors */
+}
+
+/* Styling to ensure the cursor changes to a pointer (hand) when hovering over links */
+a {
+  cursor: pointer !important; /* Ensures the cursor turns into a "pointer" (hand icon) when hovering over links */
 }
 
 /* This rule applies to the "total" rows, which summarize or aggregate data */
