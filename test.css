@@ -56,50 +56,9 @@
   border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
-  background-color: #cceeff; /* Light blue */
 }
 
-th.headerCell {
-  background-color: #ccd8e4;
-  padding: 5px;
-  border-bottom: 1px solid #bdc3c7;
-}
-
-.headerCell.dimension {
-  background-color: #e4ecf3;
-  border-right: 1px solid #bdc3c7;
-}
-
-.headerCell.pivot {
-  background-color: #ccd8e4;
-  border-right: 1px solid #bdc3c7;
-}
-
-.headerCell.measure {
-  background-color: #e4d0bd;
-  border-left: 1px solid #bdc3c7;
-}
-
-.headerCell.measure.calculation {
-  background-color: #c9dfc5;
-  border-left: 1px solid #bdc3c7;
-}
-
-.headerCell.transposed.dimension {
-  background-color: #ffcc99; /* Light orange */
-}
-
-.headerCell.transposed.dimension.merged {
-  background-color: #ff9966 !important; /* Darker orange */
-}
-
-.rowCell {
-  vertical-align: super;
-  padding-left: 5px;
-  border-bottom: 1px solid #bdc3c7;
-}
-
-/* Apply alternating row colors */
+/* Alternating row colors */
 .reportTable tr:nth-child(odd) {
   background-color: #ffccff; /* Light pink */
 }
@@ -108,12 +67,18 @@ th.headerCell {
   background-color: #ff99cc; /* Darker pink */
 }
 
-/* Hover effect without overriding alternating row colors */
+/* Hover effect over the alternating colors */
 .reportTable tr:hover {
-  background-color: rgba(153, 204, 255, 0.7); /* Semi-transparent light blue */
+  background-color: rgba(153, 204, 255, 0.5) !important; /* Semi-transparent blue */
 }
 
-/* Ensure merged cells still alternate */
+.rowCell {
+  vertical-align: super;
+  padding-left: 5px;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+/* Ensure merged cells inherit the alternating background */
 .rowCell.merged {
   background-color: inherit !important;
 }
