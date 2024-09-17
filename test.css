@@ -137,7 +137,7 @@ table.reportTable td {
   border-top: 2px solid #000000 !important; /* Thick black top border */
   font-weight: bold !important; /* Force bold text */
   font-style: normal; /* Italic font style */
-   background: white; /* Light gray background */
+   background: lightgrey; /* Light gray background */
 }
 
 /* Special case for transposed total rows */
