@@ -78,12 +78,12 @@ table.reportTable td {
 }
 
 /* Alternierende Zeilenfarben ab der letzten Dimension nach rechts */
-table.reportTable tr:nth-child(even) td:nth-last-child(-n+3), /* Letzten 2 Spalten */
+table.reportTable tr:nth-child(even) td:nth-last-child(-n+1), /* Letzten 2 Spalten */
 table.reportTable tr:nth-child(even) td.numeric {
   background-color: #f5f5f5; /* Hellgrau für gerade Zeilen */
 }
 
-table.reportTable tr:nth-child(odd) td:nth-last-child(-n+3), /* Letzten 2 Spalten */
+table.reportTable tr:nth-child(odd) td:nth-last-child(-n+1), /* Letzten 2 Spalten */
 table.reportTable tr:nth-child(odd) td.numeric {
   background-color: #ffffff; /* Weiß für ungerade Zeilen */
 }
