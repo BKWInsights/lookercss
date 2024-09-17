@@ -192,8 +192,8 @@ th.headerCell {
   background-color: #ff99cc; /* Pink */
 }
 
-/* Hover effect on the entire row for measures */
-.reportTable tr:hover {
+/* Hover effect on the entire row of measure cells */
+.reportTable tr:hover .rowCell.measure {
   background-color: #99ccff !important; /* Light blue */
 }
 
