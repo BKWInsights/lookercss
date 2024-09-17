@@ -190,12 +190,19 @@ th.headerCell {
   margin: 4px;
 }
 
-/* Hover-Effekt für Zeilen und Spalten */
+/* Hover-Effekt für Zeilen */
 .reportTable tr:hover td,
 .reportTable th:hover {
-  background-color: red !important; /* Roter Hover-Effekt */
+  background-color: red !important; /* Roter Hover-Effekt für Zeilen */
 }
 
-.reportTable td:hover {
-  background-color: lime !important; /* Limettengrün für Hover-Effekt in Spalten */
+/* Spaltenhover: Jede Zelle in der gleichen Spalte hervorheben */
+.reportTable td:hover,
+.reportTable td:nth-child(hover) {
+  background-color: lime !important; /* Limettengrüner Hover-Effekt für die gesamte Spalte */
+}
+
+/* Sicherstellen, dass der Hover-Effekt in jeder Zelle sichtbar ist */
+.reportTable td:hover::before {
+  background-color: lime !important; /* Lime für Spaltenhover */
 }
