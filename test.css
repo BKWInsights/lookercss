@@ -67,9 +67,15 @@ table.reportTable th {
   border: 1px solid #cccccc; /* Light gray border around header cells */
   border-bottom: 1px solid #000000 !important; /* Force black bottom border for header cells */
   padding: 3px; /* Padding inside header cells */
+  text-align: left; /* Links ausgerichteter Text in den Headern, ändere zu 'center' für zentrierte Header */
 }
 
-/* Styling for data cells in the reportTable */
+/* Styling für zentrierte Header, alternativ: text-align: center; für linksbündig */
+table.reportTable th {
+  text-align: center; /* Zentriert den Headertext, für linksbündige Header ändere zu 'left' */
+}
+
+/* Styling für die letzten Dimensionen und numerischen Werte */
 table.reportTable td {
   vertical-align: super; /* Aligns the content at the top of the cell */
   padding: 3px; /* Padding inside data cells */
@@ -95,7 +101,8 @@ table.reportTable tr:hover td {
 
 /* Hover Effekt für die gesamte Spalte */
 table.reportTable td:hover,
-table.reportTable td:hover ~ td {
+table.reportTable td:hover ~ td,
+table.reportTable td:hover + td {
   background-color: red !important; /* Roter Hover-Effekt für die ganze Spalte */
 }
 
@@ -162,4 +169,14 @@ table.reportTable td:hover ~ td {
   background: #f5f5f5; /* Light gray background */
 }
 
-/* Special case for transposed
+/* Special case for transposed total rows */
+.total.transposed {
+  border-top: 0px !important; /* No top border */
+  background: #d3d3d3; /* Light gray background */
+}
+
+/* Styling for animated rectangular elements */
+.rectElem.animated {
+  font-family: 'Open Sans', sans-serif; /* Updated font family */
+  margin: 4px; /* Margin around the rectangular element */
+}
