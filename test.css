@@ -15,11 +15,7 @@
   height: auto;
   padding: 5px;
   background-color: #ffcccc; /* Light red */
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   pointer-events: none;
   font-family: sans-serif;
@@ -50,26 +46,25 @@
 }
 
 .reportTable {
-  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC,
-    sans-serif;
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
   color: #696969;
   border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
 }
 
-/* Alternating row colors */
-.reportTable tr:nth-child(odd) {
-  background-color: #ffccff; /* Light pink */
+/* Stronger selector for alternating row colors */
+.reportTable tbody tr:nth-child(odd) {
+  background-color: #ffccff !important; /* Light pink */
 }
 
-.reportTable tr:nth-child(even) {
-  background-color: #ff99cc; /* Darker pink */
+.reportTable tbody tr:nth-child(even) {
+  background-color: #ff99cc !important; /* Darker pink */
 }
 
-/* Hover effect over the alternating colors */
-.reportTable tr:hover {
-  background-color: rgba(153, 204, 255, 0.5) !important; /* Semi-transparent blue */
+/* Hover effect that doesn’t override the alternating row colors */
+.reportTable tbody tr:hover {
+  background-color: rgba(153, 204, 255, 0.5) !important; /* Semi-transparent light blue */
 }
 
 .rowCell {
