@@ -129,7 +129,7 @@ table.reportTable td {
 .subtotal {
   font-style: normal; /* Italic font style */
   font-weight: bold; /* Bold text */
-  background: #f5f5f5; /* Light gray background */
+  background: white; /* Light gray background */
 }
 
 /* Styling for total rows */
@@ -137,7 +137,7 @@ table.reportTable td {
   border-top: 2px solid #000000 !important; /* Thick black top border */
   font-weight: bold !important; /* Force bold text */
   font-style: normal; /* Italic font style */
-   background: #f5f5f5; /* Light gray background */
+   background: white; /* Light gray background */
 }
 
 /* Special case for transposed total rows */
