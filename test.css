@@ -129,13 +129,14 @@ table.reportTable td {
 .subtotal {
   font-style: normal; /* Italic font style */
   font-weight: bold; /* Bold text */
-  background: #ffffff; /* Light gray background */
+  background: #f5f5f5; /* Light gray background */
 }
 
 /* Styling for total rows */
 .total {
   border-top: 2px solid #000000 !important; /* Thick black top border */
   font-weight: bold !important; /* Force bold text */
+   background: lightgrey; /* Light gray background */
 }
 
 /* Special case for transposed total rows */
