@@ -99,6 +99,11 @@ table.reportTable td:hover ~ td {
   background-color: royalblue !important; /* Royal blue for column hover, with higher priority */
 }
 
+/* Hover effect for header cells in the hovered column */
+table.reportTable th:hover {
+  background-color: royalblue !important; /* Royal blue background for the header cell of the hovered column */
+}
+
 /* Special class for header cells with specific styles */
 .headerCell {
   border-bottom: 1px solid #000000 !important; /* Black bottom border for header cells */
