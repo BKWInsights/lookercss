@@ -14,7 +14,10 @@
   height: auto;
   padding: 5px;
   background-color: black;
-  border: 5px solid red; /* Red border for tooltip */
+  border-top: 5px solid red;      /* Red top border for tooltip */
+  border-bottom: 5px solid blue;  /* Blue bottom border for tooltip */
+  border-left: 5px solid green;   /* Green left border for tooltip */
+  border-right: 5px solid yellow; /* Yellow right border for tooltip */
   border-radius: 4px;
   box-shadow: 4px 4px 10px rgba(255, 0, 0, 0.4);
   pointer-events: none;
@@ -26,7 +29,10 @@
 /* Table used inside tooltips for structured data display */
 .tooltipTable {
   font-family: 'Open Sans', sans-serif;
-  border: 5px solid green; /* Green border for tooltip table */
+  border-top: 5px solid magenta;     /* Magenta top border for tooltip table */
+  border-bottom: 5px solid cyan;     /* Cyan bottom border for tooltip table */
+  border-left: 5px solid orange;     /* Orange left border for tooltip table */
+  border-right: 5px solid purple;    /* Purple right border for tooltip table */
   border-collapse: collapse;
   table-layout: auto;
 }
@@ -35,7 +41,10 @@
 .focus {
   font-weight: bold;
   color: red;
-  border: 5px solid orange; /* Orange border for focused elements */
+  border-top: 5px solid darkblue;    /* Dark blue top border for focused elements */
+  border-bottom: 5px solid darkgreen;/* Dark green bottom border for focused elements */
+  border-left: 5px solid violet;     /* Violet left border for focused elements */
+  border-right: 5px solid lime;      /* Lime right border for focused elements */
 }
 
 /* Class to hide elements */
@@ -46,15 +55,20 @@
 /* Styles for a report table */
 .reportTable {
   font-family: 'Open Sans', sans-serif;
-  border: 5px solid blue; /* Blue border for the report table */
+  border-top: 5px solid pink;       /* Pink top border for report table */
+  border-bottom: 5px solid lightblue;/* Light blue bottom border for report table */
+  border-left: 5px solid brown;     /* Brown left border for report table */
+  border-right: 5px solid gray;     /* Gray right border for report table */
   border-collapse: collapse;
   border-spacing: 2px;
 }
 
 /* Styling for table header cells */
 table.reportTable th {
-  border: 5px solid purple; /* Purple border for header cells */
+  border-top: 5px solid darkred;     /* Dark red top border for header cells */
   border-bottom: 5px solid yellow !important; /* Yellow bottom border for header cells */
+  border-left: 5px solid black;      /* Black left border for header cells */
+  border-right: 5px solid darkblue;  /* Dark blue right border for header cells */
   padding: 3px;
   background-color: #ffffff;
 }
@@ -63,7 +77,10 @@ table.reportTable th {
 table.reportTable td {
   vertical-align: super;
   padding: 3px;
-  border: 5px solid darkgreen; /* Dark green border for data cells */
+  border-top: 5px solid green;       /* Green top border for data cells */
+  border-bottom: 5px solid red;      /* Red bottom border for data cells */
+  border-left: 5px solid purple;     /* Purple left border for data cells */
+  border-right: 5px solid orange;    /* Orange right border for data cells */
   border-collapse: collapse;
 }
 
@@ -102,7 +119,10 @@ table.reportTable tr:nth-child(odd) td.numeric {
 
 /* Special class for header cells with specific styles */
 .headerCell {
-  border-bottom: 5px solid cyan !important; /* Cyan border for header cells */
+  border-top: 5px solid cyan;       /* Cyan top border for header cells */
+  border-bottom: 5px solid pink;    /* Pink bottom border for header cells */
+  border-left: 5px solid lightgreen;/* Light green left border for header cells */
+  border-right: 5px solid darkgray; /* Dark gray right border for header cells */
   font-weight: bold;
   padding: 3px;
   background-color: darkorange;
@@ -112,13 +132,19 @@ table.reportTable tr:nth-child(odd) td.numeric {
 .indexCell.transposed {
   font-weight: bold;
   background-color: brown;
-  border: 5px solid magenta; /* Magenta border for transposed index cells */
+  border-top: 5px solid purple;      /* Purple top border for transposed index cells */
+  border-bottom: 5px solid yellow;   /* Yellow bottom border for transposed index cells */
+  border-left: 5px solid red;        /* Red left border for transposed index cells */
+  border-right: 5px solid blue;      /* Blue right border for transposed index cells */
 }
 
 /* Ensures merged index cells have a white background */
 .indexCell.transposed.merged {
   background-color: white !important;
-  border: 5px solid darkred; /* Dark red border for merged index cells */
+  border-top: 5px solid black;       /* Black top border for merged index cells */
+  border-bottom: 5px solid darkred;  /* Dark red bottom border for merged index cells */
+  border-left: 5px solid gray;       /* Gray left border for merged index cells */
+  border-right: 5px solid orange;    /* Orange right border for merged index cells */
 }
 
 /* Specific styling for row cells */
@@ -126,68 +152,59 @@ table.reportTable tr:nth-child(odd) td.numeric {
   vertical-align: super;
   padding-left: 5px;
   background-color: darkgray;
-  border: 5px solid violet; /* Violet border for row cells */
+  border-top: 5px solid lightblue;   /* Light blue top border for row cells */
+  border-bottom: 5px solid pink;     /* Pink bottom border for row cells */
+  border-left: 5px solid yellow;     /* Yellow left border for row cells */
+  border-right: 5px solid teal;      /* Teal right border for row cells */
 }
 
 /* Left-align text for non-numeric values */
 .nonNumeric {
   text-align: left;
   background-color: #ffffff;
-  border: 5px solid teal; /* Teal border for non-numeric cells */
+  border-top: 5px solid orange;      /* Orange top border for non-numeric cells */
+  border-bottom: 5px solid green;    /* Green bottom border for non-numeric cells */
+  border-left: 5px solid blue;       /* Blue left border for non-numeric cells */
+  border-right: 5px solid purple;    /* Purple right border for non-numeric cells */
 }
 
 /* Right-align text for numeric values */
 .numeric {
   text-align: right;
   background-color: darkred;
-  border: 5px solid pink; /* Pink border for numeric cells */
+  border-top: 5px solid darkgreen;   /* Dark green top border for numeric cells */
+  border-bottom: 5px solid magenta;  /* Magenta bottom border for numeric cells */
+  border-left: 5px solid lightgray;  /* Light gray left border for numeric cells */
+  border-right: 5px solid darkblue;  /* Dark blue right border for numeric cells */
 }
 
 /* Styles negative values in blue */
 .negative {
   color: blue;
-  border: 5px solid lightgreen; /* Light green border for negative values */
+  border-top: 5px solid lime;        /* Lime top border for negative values */
+  border-bottom: 5px solid orange;   /* Orange bottom border for negative values */
+  border-left: 5px solid yellow;     /* Yellow left border for negative values */
+  border-right: 5px solid brown;     /* Brown right border for negative values */
 }
 
 /* Specific styling for estimated values */
 .estimate {
   color: darkgray !important;
-  border: 5px solid indigo; /* Indigo border for estimated values */
+  border-top: 5px solid cyan;        /* Cyan top border for estimated values */
+  border-bottom: 5px solid violet;   /* Violet bottom border for estimated values */
+  border-left: 5px solid red;        /* Red left border for estimated values */
+  border-right: 5px solid lightblue; /* Light blue right border for estimated values */
 }
 
 /* Adds extra left padding for single-index cells */
 .singleIndex {
   padding-left: 15px !important;
   background-color: blue;
-  border: 5px solid yellow; /* Yellow border for single-index cells */
+  border-top: 5px solid darkred;     /* Dark red top border for single-index cells */
+  border-bottom: 5px solid lightgreen;/* Light green bottom border for single-index cells */
+  border-left: 5px solid yellow;     /* Yellow left border for single-index cells */
+  border-right: 5px solid pink;      /* Pink right border for single-index cells */
 }
 
 /* Styling for subtotal rows */
-.subtotal {
-  font-style: normal;
-  font-weight: normal;
-  background: turquoise;
-  border: 5px solid lightblue; /* Light blue border for subtotal rows */
-}
-
-/* Styling for total rows */
-.total {
-  border-top: 5px solid brown !important;
-  font-weight: bold !important;
-  font-style: normal;
-  background: darkblue;
-}
-
-/* Special case for transposed total rows */
-.total.transposed {
-  border-top: 0px !important;
-  background: darkblue;
-}
-
-/* Styling for animated rectangular elements */
-.rectElem.animated {
-  font-family: 'Open Sans', sans-serif;
-  margin: 4px;
-  background-color: darkkhaki;
-  border: 5px solid maroon; /* Maroon border for animated rectangular elements */
-}
+.su
