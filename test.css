@@ -136,7 +136,7 @@ table.reportTable th:hover {
 /* Left-align text for non-numeric values */
 .nonNumeric {
   text-align: left; /* Left-aligns non-numeric content */
-  background-color: #f5f5f5; /* f5f5f5 Color Hex WhiteSmoke background for non-numeric cells - dimensional columns */
+  background-color: #ffffff; /* ffffff Color Hex White background for non-numeric cells - dimensional columns */
 }
 
 /* Right-align text for numeric values */
