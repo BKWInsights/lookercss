@@ -60,10 +60,10 @@
 
 /* Styling for table header cells */
 table.reportTable th {
-  border: 3px solid blue; /* Blue border around header cells with 3 px */
-  border-bottom: 1px solid purple !important; /* Purple bottom border for header cells */
+  border: 0px solid black; /* black border around header cells with 3 px */
+  border-bottom: 5px solid purple !important; /* Purple bottom border for header cells */
   padding: 3px; /* Padding inside the header cells */
-  background-color: black; /* black background for header cells */
+  background-color: #ffffff; /* white background for header cells */
 }
 
 /* Styling for data cells inside the report table */
