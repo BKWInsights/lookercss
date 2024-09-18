@@ -60,7 +60,7 @@
 
 /* Styling for table header cells */
 table.reportTable th {
-  border: 0px solid black; /* black border around header cells with 3 px */
+  border: 1px solid black; /* black border around header cells with 1 px */
   border-bottom: 5px solid purple !important; /* Purple bottom border for header cells */
   padding: 3px; /* Padding inside the header cells */
   background-color: #ffffff; /* white background for header cells */
