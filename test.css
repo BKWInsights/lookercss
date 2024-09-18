@@ -87,7 +87,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
 
 /* Styling for elements when hovered over */
 .hover {
-  background-color: limegreen; /* Lime green background color when hovered */
+  background-color: limegreen !important;  /* Lime green background color when hovered */
 }
 
 /* Hover effect for row: Gray69 color over all cells, overriding alternating background */
