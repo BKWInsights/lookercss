@@ -50,11 +50,6 @@
   display: none; /* Completely hides the element and removes it from layout */
 }
 
-/* Styling for elements when hovered over */
-.hover {
-  background-color: limegreen; /* Lime green background color when hovered */
-}
-
 /* Styles for a report table */
 .reportTable {
   font-family: 'Open Sans', sans-serif; /* Ensures the table uses Open Sans font */
@@ -88,6 +83,11 @@ table.reportTable tr:nth-child(even) td.numeric {
 table.reportTable tr:nth-child(odd) td:last-child,
 table.reportTable tr:nth-child(odd) td.numeric {
   background-color: #ffffff; /* ffffff Color Hex background for odd rows in the last dimension and numeric values */
+}
+
+/* Styling for elements when hovered over */
+.hover {
+  background-color: limegreen; /* Lime green background color when hovered */
 }
 
 /* Hover effect for row: Gray69 color over all cells, overriding alternating background */
