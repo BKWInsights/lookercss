@@ -90,15 +90,15 @@ table.reportTable tr:nth-child(odd) td.numeric {
   background-color: #ffffff; /* ffffff Color Hex background for odd rows in the last dimension and numeric values */
 }
 
-/* Hover effect for entire row: cyan color over all cells, overriding alternating background */
+/* Hover effect for row: Gray69 color over all cells, overriding alternating background */
 table.reportTable tr:hover td {
-  background-color: cyan !important; /* Cyan background when hovering over the row */
+  background-color: #b0b0b0  !important; /* #b0b0b0  Color Hex Gray69 background when hovering over the row. This will only hover from left to the mouseover cell */
 }
 
 /* Spaltenhover: Überdeckt die alternierenden Hintergrundfarben und synchronisiert den Header */
 table.reportTable td:hover,
 table.reportTable td:hover ~ td {
-  background-color: red !important; /* Red for column hover, with higher priority */
+  background-color: #b0b0b0  !important; /* #b0b0b0  Color Hex Gray69 background when hovering over the row. This will only hover from the mouseover cell to the right*/
 }
 
 /* Applies hover effect to the header when a column is hovered */
