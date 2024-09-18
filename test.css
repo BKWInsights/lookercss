@@ -81,7 +81,7 @@ table.reportTable td {
   border-bottom: 1px solid black;      /* Red bottom border for data cells */
   border-left:2px solid purple;     /* Purple left border for data cells */
   border-right: 1px dotted grey;    /* Orange right border for data cells */
-  border-collapse: collapse;
+ border-collapse: separate;
 }
 
 /* Styling for elements when hovered over */
