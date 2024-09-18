@@ -82,7 +82,7 @@ table.reportTable td {
 /* Alternating background colors for even and odd rows in the last dimension and numeric columns */
 table.reportTable tr:nth-child(even) td:last-child,
 table.reportTable tr:nth-child(even) td.numeric {
-  background-color: yellow; /* Yellow background for even rows in the last dimension and numeric values */
+  background-color: #f5f5f5; /* light grey background for even rows in the last dimension and numeric values */
 }
 
 table.reportTable tr:nth-child(odd) td:last-child,
