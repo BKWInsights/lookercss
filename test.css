@@ -87,7 +87,7 @@ table.reportTable tr:nth-child(even) td.numeric {
 
 table.reportTable tr:nth-child(odd) td:last-child,
 table.reportTable tr:nth-child(odd) td.numeric {
-  background-color: white ; /* #c4c4c4 Color Hex Gray77 background for odd rows in the last dimension and numeric values */
+  background-color: #ffffff; /* ffffff Color Hex background for odd rows in the last dimension and numeric values */
 }
 
 /* Hover effect for entire row: cyan color over all cells, overriding alternating background */
