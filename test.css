@@ -79,7 +79,7 @@ table.reportTable td {
   padding: 15px;
   border-top: 1px dotted black;       /* Green top border for data cells */
   border-top-style: dotted;
-  border-bottom: 2px solid red;      /* Red bottom border for data cells */
+  border-bottom: 0.5px solid red;      /* Red bottom border for data cells */
   border-left:1px solid purple;     /* Purple left border for data cells */
   border-right: 1px dotted grey;    /* Orange right border for data cells */
  border-collapse: separate;
