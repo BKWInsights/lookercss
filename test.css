@@ -63,7 +63,7 @@ table.reportTable th {
   border: 3px solid blue; /* Blue border around header cells with 3 px */
   border-bottom: 1px solid purple !important; /* Purple bottom border for header cells */
   padding: 3px; /* Padding inside the header cells */
-  background-color: darkorange; /* Dark orange background for header cells */
+  background-color: black; /* black background for header cells */
 }
 
 /* Styling for data cells inside the report table */
@@ -85,7 +85,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   background-color: #ffffff; /* ffffff Color Hex background for odd rows in the last dimension and numeric values */
 }
 
-/* Styling for elements when hovered over */
+/* Styling for elements when hovered over seems not to work at all!*/
 .hover {
   background-color: limegreen !important;  /* Lime green background color when hovered */
 }
