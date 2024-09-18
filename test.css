@@ -77,7 +77,7 @@ table.reportTable th {
 table.reportTable td {
   vertical-align: super;
   padding: 3px;
-  border-top: 40px solid green;       /* Green top border for data cells */
+  border-top: 1px solid green;       /* Green top border for data cells */
   border-bottom: 30px solid red;      /* Red bottom border for data cells */
   border-left:20px solid purple;     /* Purple left border for data cells */
   border-right: 10px solid orange;    /* Orange right border for data cells */
