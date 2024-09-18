@@ -55,7 +55,7 @@
 /* Styles for a report table */
 .reportTable {
   font-family: 'Open Sans', sans-serif;
-  border-top: 5px solid pink;       /* Pink top border for report table */
+  border-top: 50px solid pink;       /* Pink top border for report table */
   border-bottom: 5px solid lightblue;/* Light blue bottom border for report table */
   border-left: 5px solid brown;     /* Brown left border for report table */
   border-right: 5px solid gray;     /* Gray right border for report table */
