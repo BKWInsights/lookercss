@@ -58,14 +58,14 @@
 /* Styles for a report table */
 .reportTable {
   font-family: 'Open Sans', sans-serif; /* Ensures the table uses Open Sans font */
-  border: 1px solid black; /* Black border around the table */
+  border: 5px solid black; /* Black border around the table with 5 px*/
   border-collapse: collapse; /* Borders between table cells are collapsed into one */
   border-spacing: 2px; /* Sets the space between table cells */
 }
 
 /* Styling for table header cells */
 table.reportTable th {
-  border: 1px solid blue; /* Blue border around header cells */
+  border: 3px solid blue; /* Blue border around header cells with 3 px */
   border-bottom: 1px solid purple !important; /* Purple bottom border for header cells */
   padding: 3px; /* Padding inside the header cells */
   background-color: darkorange; /* Dark orange background for header cells */
@@ -75,7 +75,7 @@ table.reportTable th {
 table.reportTable td {
   vertical-align: super; /* Aligns the content towards the top of the cell */
   padding: 3px; /* Padding inside data cells */
-  border: 1px solid darkgreen; /* Dark green border around data cells */
+  border: 2px solid darkgreen; /* Dark green border around data cells with 2 px*/
   border-collapse: collapse; /* Collapses borders between adjacent cells */
 }
 
