@@ -25,6 +25,7 @@
   font-family: 'Roboto', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 
     'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
   font-size: 12px;
+  line-height: 1; /* Minimale Zeilenhöhe */
   z-index: 2;
 }
 
@@ -38,6 +39,7 @@
   border-right: 5px solid purple;    /* Purple right border for tooltip table */
   border-collapse: collapse;
   table-layout: auto;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Styling for elements that are focused */
@@ -48,6 +50,7 @@
   border-bottom: 5px solid darkgreen;/* Dark green bottom border for focused elements */
   border-left: 5px solid violet;     /* Violet left border for focused elements */
   border-right: 5px solid lime;      /* Lime right border for focused elements */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Class to hide elements */
@@ -65,6 +68,7 @@
   border-right: 5px solid gray;     /* Gray right border for report table */
   border-collapse: collapse;
   border-spacing: 2px;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Styling für alle Headerzellen (Standard) */
@@ -74,29 +78,35 @@ table.reportTable th {
   vertical-align: middle;
   border-top: 1px solid gray; /* Änderung von 5px cyan auf 1px grau */
   border-bottom: 1px solid black; /* Änderung des grünen Rahmens auf 1px schwarz */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Styling für alle Headerzellen in der ersten Zeile */
 table.reportTable tr:nth-child(1) th {
   border-bottom: 1px solid black; /* Änderung von 5px grün auf 1px schwarz */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Different borders between pivoted years (e.g., 2024, 2025) */
 table.reportTable th.pivot-value {
   border-right: 2px solid black;  /* 2px thick border between pivot years */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Different borders between measures inside pivoted years */
 table.reportTable th.measure {
   border-right: 0.5px solid gray;  /* 0.5px thin gray border between measures */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 table.reportTable td.pivot-value {
   border-right: 2px solid black;  /* 2px thick border between pivot years in data cells */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 table.reportTable td.measure {
   border-right: 0.5px solid gray;  /* 0.5px thin gray border between measures in data cells */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Vertikal zentrieren für Dimensionen */
@@ -104,6 +114,7 @@ table.reportTable td.dimension {
   vertical-align: middle; /* Vertikal zentrieren für Dimensionen */
   padding: 15px; /* Optional: zusätzlicher Abstand */
   border-right: 1px solid black; /* 1px black border between dimensions */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Vertikal zentrieren für Header-Dimensionen */
@@ -111,6 +122,7 @@ table.reportTable th.dimension {
   vertical-align: middle; /* Vertikal zentrieren für Header-Dimensionen */
   padding: 15px; /* Optional: zusätzlicher Abstand */
   border-right: 1px solid black; /* 1px black border between dimensions */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Styling for data cells inside the report table */
@@ -122,39 +134,46 @@ table.reportTable td {
   border-left: 1px solid purple;
   border-right: 1px dotted grey;
   border-collapse: separate;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Styling for elements when hovered over */
 .hover {
   background-color: limegreen !important;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Hover effect for row: Gray69 color over all cells, overriding alternating background */
 table.reportTable tr:hover td {
   background-color: #b0b0b0  !important;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Spaltenhover: Überdeckt die alternierenden Hintergrundfarben und synchronisiert den Header */
 table.reportTable td:hover,
 table.reportTable td:hover ~ td {
   background-color: #b0b0b0  !important;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Applies hover effect to the header when a column is hovered */
 table.reportTable td:hover::before,
 table.reportTable th:hover {
   background-color: red !important;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Alternating background colors for even and odd rows in the last dimension and numeric columns */
 table.reportTable tr:nth-child(even) td:last-child,
 table.reportTable tr:nth-child(even) td.numeric {
   background-color: #f5f5f5;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 table.reportTable tr:nth-child(odd) td:last-child,
 table.reportTable tr:nth-child(odd) td.numeric {
   background-color: #ffffff;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Special class for header cells with specific styles */
@@ -167,6 +186,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   padding: 3px;
   background-color: #ffffff; /* Anpassung der Hintergrundfarbe an den hellen Tabellenhintergrund */
   vertical-align: middle;
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Styling for transposed index cells (rotated or swapped) */
@@ -175,6 +195,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   background-color: brown;
   border: 1px solid black;  /* Alle Ränder 1px schwarz */
   vertical-align: middle;   /* Vertikal zentriert */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Ensures merged index cells have a white background */
@@ -185,6 +206,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   border-left: 5px solid gray;
   border-right: 5px solid orange;
   vertical-align: middle; /* Vertikal zentrieren für zusammengeführte Zellen */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Specific styling for row cells */
@@ -193,6 +215,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   padding-left: 5px;
   background-color: darkgray;
   border: 1px solid black;  /* Alle Ränder 1px schwarz */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Left-align text for non-numeric values */
@@ -204,6 +227,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   border-left: 5px solid blue;
   border-right: 5px solid purple;
   vertical-align: middle; /* Vertikal zentrieren für nicht-numerische Werte */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Right-align text for numeric values */
@@ -215,6 +239,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   border-left: 5px solid lightgray;
   border-right: 5px solid darkblue;
   vertical-align: middle; /* Vertikal zentrieren für numerische Werte */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Styles negative values in blue */
@@ -225,6 +250,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   border-left: 5px solid yellow;
   border-right: 5px solid brown;
   vertical-align: middle; /* Vertikal zentrieren für negative Werte */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Specific styling for estimated values */
@@ -235,6 +261,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   border-left: 5px solid red;
   border-right: 5px solid lightblue;
   vertical-align: middle; /* Vertikal zentrieren für geschätzte Werte */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
 
 /* Adds extra left padding for single-index cells */
@@ -246,4 +273,5 @@ table.reportTable tr:nth-child(odd) td.numeric {
   border-left: 5px solid yellow;
   border-right: 5px solid pink;
   vertical-align: middle; /* Vertikal zentrieren für Einzelindexzellen */
+  line-height: 1; /* Minimale Zeilenhöhe */
 }
