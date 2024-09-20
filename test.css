@@ -66,28 +66,16 @@
 /* Styling für alle Headerzellen (Standard) */
 table.reportTable th {
   padding: 3px;
-  background-color: #ffffff;
+  background-color: #ffffff; /* Anpassung an hellen Hintergrund der restlichen Tabelle */
   vertical-align: middle;
-}
-
-
-
-table.reportTable th:nth-child(1) {
-  border-top: 5px solid blue; /* Anderer oberer Rahmen für die erste Zeile */
-  background-color: lightgray; /* Anderer Hintergrund für die erste Zeile */
+  border-top: 1px solid gray; /* Änderung von 5px cyan auf 1px grau */
+  border-bottom: 1px solid black; /* Änderung des grünen Rahmens auf 1px schwarz */
 }
 
 /* Styling für alle Headerzellen in der ersten Zeile */
 table.reportTable tr:nth-child(1) th {
-  border-bottom: 2px solid black; /* Dünnerer Rahmen unten für die erste Zeile */
+  border-bottom: 1px solid black; /* Änderung von 5px grün auf 1px schwarz */
 }
-
-
-
-
-
-
-
 
 /* Different borders between pivoted years (e.g., 2024, 2025) */
 table.reportTable th.pivot-value {
@@ -165,14 +153,14 @@ table.reportTable tr:nth-child(odd) td.numeric {
 
 /* Special class for header cells with specific styles */
 .headerCell {
-  border-top: 5px solid cyan;
-  border-bottom: 5px solid pink;
-  border-left: 5px solid lightgreen;
-  border-right: 5px solid darkgray;
+  border-top: 1px solid gray; /* Anpassung des oberen Rahmens auf 1px grau */
+  border-bottom: 1px solid black; /* Anpassung des unteren Rahmens auf 1px schwarz */
+  border-left: 1px solid lightgreen; /* Beibehalten des linken Rahmens, wenn gewünscht */
+  border-right: 1px solid darkgray;
   font-weight: bold;
   padding: 3px;
-  background-color: darkorange;
-  vertical-align: middle; /* Vertikal zentrieren für Header-Spezialzellen */
+  background-color: #ffffff; /* Anpassung der Hintergrundfarbe an den hellen Tabellenhintergrund */
+  vertical-align: middle;
 }
 
 /* Styling for transposed index cells (rotated or swapped) */
@@ -198,7 +186,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   vertical-align: super;
   padding-left: 5px;
   background-color: darkgray;
- border: 1px solid black;  /* Alle Ränder 1px schwarz */
+  border: 1px solid black;  /* Alle Ränder 1px schwarz */
 }
 
 /* Left-align text for non-numeric values */
