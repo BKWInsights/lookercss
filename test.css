@@ -12,25 +12,33 @@
     format('woff2');
 }
 
+/* Allgemeine Schrift- und Farbdefinitionen */
+body {
+  font-family: 'Open Sans', Helvetica, Arial, 'Noto Sans TC', 'Noto Sans SC',
+    sans-serif;
+  color: #333333; /* Dunkelgrau für bessere Lesbarkeit */
+  line-height: 1.5; /* Optimierte Zeilenhöhe */
+}
+
 /* Tooltip-Styling */
 #tooltip {
   position: absolute;
   width: auto;
   height: auto;
-  padding: 5px;
-  background-color: white;
+  padding: 8px; /* Erhöhter Padding für bessere Lesbarkeit */
+  background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   pointer-events: none;
-  font-family: sans-serif;
+  font-family: inherit;
   font-size: 12px;
   z-index: 2;
 }
 
 /* Tabelle für den Tooltip */
 .tooltipTable {
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
-  border: 0px;
+  font-family: inherit;
+  border: 0;
   border-collapse: collapse;
   table-layout: auto;
 }
@@ -38,7 +46,7 @@
 /* Fettgedruckte Schrift für die Fokus-Elemente */
 .focus {
   font-weight: bold;
-  color: #333333; /* Dunkelgrau, näher an Schwarz */
+  color: inherit;
 }
 
 /* Versteckte Elemente */
@@ -48,100 +56,100 @@
 
 /* Hover-Effekt mit hellerem Grau */
 .hover {
-  background-color: #eaeaea; /* Hellgrau für den Hover-Effekt */
+  background-color: #eaeaea;
 }
 
 /* Tabelle für Berichte */
 .reportTable {
-  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC,
-    sans-serif;
-  color: #333333; /* Dunkelgrau für die Schrift, näher an Schwarz */
+  width: 100%;
+  font-family: inherit;
+  color: inherit;
   border-collapse: collapse;
-  border-spacing: 3px;
+  border-spacing: 0;
   table-layout: auto;
 }
 
-/* Alternierende Farben nur für die Measures und die letzte Dimension */
+/* Alternierende Farben für Measures und letzte Dimension */
 .reportTable tr:nth-child(even) td:last-child,
 .reportTable tr:nth-child(even) td.measure {
-  background-color: #f0f0f0; /* Etwas dunkleres Grau für die alternierenden Zeilen */
+  background-color: #f7f7f7;
 }
 
 .reportTable tr:nth-child(odd) td:last-child,
 .reportTable tr:nth-child(odd) td.measure {
-  background-color: white;
+  background-color: #ffffff;
 }
 
-/* Hover-Effekt bleibt im Grauton */
+/* Hover-Effekt im Grauton */
 .reportTable tr:hover td {
-  background-color: #eaeaea !important; /* Helles Grau für den Hover-Effekt */
+  background-color: #eaeaea !important;
 }
 
 /* Headerzelle für Spaltenüberschriften */
 th.headerCell {
-  background-color: white;
-  padding: 5px;
-  border-bottom: 1px solid lightgray;
+  background-color: #ffffff;
+  padding: 10px; /* Erhöhter Padding für bessere Lesbarkeit */
+  border-bottom: 1px solid #cccccc;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Header-Schrift */
+  color: inherit;
 }
 
 /* Headerzelle für Dimensionen */
 .headerCell.dimension {
-  background-color: white;
-  border-right: 1px solid lightgray;
+  background-color: #ffffff;
+  border-right: 1px solid #cccccc;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Header-Schrift */
+  color: inherit;
 }
 
 /* Headerzelle für Pivots */
 .headerCell.pivot {
-  background-color: white;
-  border-right: 1px solid lightgray;
+  background-color: #ffffff;
+  border-right: 1px solid #cccccc;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Header-Schrift */
+  color: inherit;
 }
 
 /* Headerzelle für Messwerte */
 .headerCell.measure {
-  background-color: white; /* Gleiche Hintergrundfarbe wie der Rest der Tabelle */
-  border-left: 1px solid lightgray;
+  background-color: #ffffff;
+  border-left: 1px solid #cccccc;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Header-Schrift */
+  color: inherit;
 }
 
 /* Headerzelle für berechnete Messwerte */
 .headerCell.measure.calculation {
-  background-color: white;
-  border-left: 1px solid lightgray;
+  background-color: #ffffff;
+  border-left: 1px solid #cccccc;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Header-Schrift */
+  color: inherit;
 }
 
 /* Headerzelle für transponierte Dimensionen */
 .headerCell.transposed.dimension {
-  background-color: white;
+  background-color: #ffffff;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Header-Schrift */
+  color: inherit;
 }
 
 /* Hintergrundfarbe bei zusammengeführten transponierten Dimensionen */
 .headerCell.transposed.dimension.merged {
-  background-color: white !important;
+  background-color: #ffffff !important;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Header-Schrift */
+  color: inherit;
 }
 
 /* Zeilenzellen für Tabelleninhalte */
 .rowCell {
   vertical-align: middle;
-  padding: 6px; /* Minimal erhöhtes Padding für die Zeilen */
-  border-bottom: 1px solid lightgray;
+  padding: 8px; /* Erhöhter Padding für bessere Lesbarkeit */
+  border-bottom: 1px solid #cccccc;
 }
 
 /* Zeilenzellen bei zusammengeführten Zeilen */
 .rowCell.merged {
-  background-color: white !important;
+  background-color: #ffffff !important;
   vertical-align: middle;
 }
 
@@ -149,49 +157,49 @@ th.headerCell {
 .indexCell.transposed {
   font-weight: bold;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Hintergrundfarbe für transponierte Pivot-Indexzellen */
 .indexCell.transposed.pivot {
-  background-color: white;
+  background-color: #ffffff;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Hintergrundfarbe für transponierte Dimensions-Indexzellen */
 .indexCell.transposed.dimension {
-  background-color: white;
+  background-color: #ffffff;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Hintergrundfarbe für transponierte Messwerte */
 .indexCell.transposed.measure {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Hintergrundfarbe für transponierte Berechnungen */
 .indexCell.transposed.calculation {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Nicht-numerische Zellen linksbündig */
 .nonNumeric {
   text-align: left;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Numerische Zellen rechtsbündig */
 .numeric {
   text-align: right;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Negative Werte rot darstellen */
@@ -200,7 +208,7 @@ th.headerCell {
   vertical-align: middle;
 }
 
-/* Schätzung in "darkgray" */
+/* Schätzung in Dunkelgrau */
 .estimate {
   color: darkgray !important;
   vertical-align: middle;
@@ -216,28 +224,28 @@ th.headerCell {
 .subtotal {
   font-style: italic;
   font-weight: bold;
-  background: #f0f0f0; /* Etwas dunkleres Grau für Zwischensummen */
+  background: #f7f7f7;
   vertical-align: middle;
 }
 
 /* Gesamtzeilen fettgedruckt und mit dunkler Linie */
 .total {
-  border-top: 2px solid dimgray !important;
+  border-top: 2px solid #666666 !important;
   font-weight: bold !important;
   vertical-align: middle;
-  color: #333333; /* Dunkelgrau für die Schrift */
+  color: inherit;
 }
 
 /* Gesamtzeilen bei transponierten Tabellen */
 .total.transposed {
-  border-top: 0px !important;
-  background: #f0f0f0;
+  border-top: 0 !important;
+  background: #f7f7f7;
   vertical-align: middle;
 }
 
 /* Stil für animierte Elemente */
 .rectElem.animated {
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-family: inherit;
   margin: 4px;
   vertical-align: middle;
 }
