@@ -45,9 +45,9 @@
   display: none;
 }
 
-/* Hover-Effekt mit Hintergrundfarbe "lightyellow" */
+/* Hover-Effekt mit Hintergrundfarbe "lightgrey" */
 .hover {
-  background-color: lightgrey; /* Farbe in "lightyellow" umgewandelt */
+  background-color: lightgrey; /* Farbe in "lightgrey" umgewandelt */
 }
 
 /* Tabelle für Berichte */
@@ -60,22 +60,22 @@
   table-layout: fixed;
 }
 
-/* Headerzelle für Spaltenüberschriften */
+/* Headerzelle für Spaltenüberschriften, gleiche Hintergrundfarbe wie Tabelle */
 th.headerCell {
-  background-color: lightsteelblue; /* Farbe in "lightsteelblue" umgewandelt */
+  background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
   padding: 5px;
   border-bottom: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
 }
 
 /* Headerzelle für Dimensionen */
 .headerCell.dimension {
-  background-color: aliceblue; /* Farbe in "aliceblue" umgewandelt */
+  background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
   border-right: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
 }
 
 /* Headerzelle für Pivots */
 .headerCell.pivot {
-  background-color: lightsteelblue; /* Farbe in "lightsteelblue" umgewandelt */
+  background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
   border-right: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
 }
 
@@ -93,12 +93,12 @@ th.headerCell {
 
 /* Headerzelle für transponierte Dimensionen */
 .headerCell.transposed.dimension {
-  background-color: aliceblue; /* Farbe in "aliceblue" umgewandelt */
+  background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
 }
 
 /* Hintergrundfarbe bei zusammengeführten transponierten Dimensionen */
 .headerCell.transposed.dimension.merged {
-  background-color: aliceblue !important; /* Farbe in "aliceblue" umgewandelt */
+  background-color: white !important; /* Farbe an Tabellenhintergrundfarbe angepasst */
 }
 
 /* Zeilenzellen für Tabelleninhalte */
@@ -120,12 +120,12 @@ th.headerCell {
 
 /* Hintergrundfarbe für transponierte Pivot-Indexzellen */
 .indexCell.transposed.pivot {
-  background-color: lightsteelblue; /* Farbe in "lightsteelblue" umgewandelt */
+  background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
 }
 
 /* Hintergrundfarbe für transponierte Dimensions-Indexzellen */
 .indexCell.transposed.dimension {
-  background-color: aliceblue; /* Farbe in "aliceblue" umgewandelt */
+  background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
 }
 
 /* Hintergrundfarbe für transponierte Messwerte */
@@ -140,12 +140,12 @@ th.headerCell {
 
 /* Hintergrundfarbe für zusammengeführte transponierte Pivot-Indexzellen */
 .indexCell.transposed.pivot.merged {
-  background-color: lightsteelblue !important; /* Farbe in "lightsteelblue" umgewandelt */
+  background-color: white !important; /* Farbe an Tabellenhintergrundfarbe angepasst */
 }
 
 /* Hintergrundfarbe für zusammengeführte transponierte Dimensionen */
 .indexCell.transposed.dimension.merged {
-  background-color: aliceblue !important; /* Farbe in "aliceblue" umgewandelt */
+  background-color: white !important; /* Farbe an Tabellenhintergrundfarbe angepasst */
 }
 
 /* Hintergrundfarbe für zusammengeführte transponierte Messwerte */
