@@ -64,7 +64,7 @@
 /* Alternierende Farben nur für die Measures und die letzte Dimension */
 .reportTable tr:nth-child(even) td:last-child,
 .reportTable tr:nth-child(even) td.measure {
-  background-color: #f9f9f9; /* Viel helleres Grau für die alternierenden Zeilen */
+  background-color: #f0f0f0; /* Etwas dunkleres Grau für die alternierenden Zeilen */
 }
 
 .reportTable tr:nth-child(odd) td:last-child,
@@ -107,7 +107,6 @@ th.headerCell {
   background-color: white; /* Gleiche Hintergrundfarbe wie der Rest der Tabelle */
   border-left: 1px solid lightgray;
   vertical-align: middle;
-  text-align: center; /* Zentrierung der Measure-Beschreibung */
   color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
@@ -116,19 +115,7 @@ th.headerCell {
   background-color: white;
   border-left: 1px solid lightgray;
   vertical-align: middle;
-  text-align: center; /* Zentrierung der Measure-Beschreibung */
   color: #333333; /* Dunkelgrau für die Header-Schrift */
-}
-
-/* Dünne dunkelgraue Linie zwischen pivotisierten Dimensionen */
-.reportTable th.pivot-value,
-.reportTable td.pivot-value {
-  border-right: 1px solid #333333; /* Dünne dunkelgraue Linie */
-}
-
-/* Zentrierung der Measure-Beschreibung in Datenzellen */
-.reportTable td.measure {
-  text-align: center; /* Zentrierung für die Measure-Datenzellen */
 }
 
 /* Headerzelle für transponierte Dimensionen */
@@ -181,18 +168,16 @@ th.headerCell {
 
 /* Hintergrundfarbe für transponierte Messwerte */
 .indexCell.transposed.measure {
-  background-color: #f9f9f9;
+  background-color: #f0f0f0;
   vertical-align: middle;
   color: #333333; /* Dunkelgrau für die Schrift */
-  text-align: center; /* Zentrierung für transponierte Measures */
 }
 
 /* Hintergrundfarbe für transponierte Berechnungen */
 .indexCell.transposed.calculation {
-  background-color: #f9f9f9;
+  background-color: #f0f0f0;
   vertical-align: middle;
   color: #333333; /* Dunkelgrau für die Schrift */
-  text-align: center; /* Zentrierung für transponierte Berechnungen */
 }
 
 /* Nicht-numerische Zellen linksbündig */
@@ -231,7 +216,7 @@ th.headerCell {
 .subtotal {
   font-style: italic;
   font-weight: bold;
-  background: #f9f9f9; /* Helleres Grau für Zwischensummen */
+  background: #f0f0f0; /* Etwas dunkleres Grau für Zwischensummen */
   vertical-align: middle;
 }
 
@@ -246,7 +231,7 @@ th.headerCell {
 /* Gesamtzeilen bei transponierten Tabellen */
 .total.transposed {
   border-top: 0px !important;
-  background: #f9f9f9;
+  background: #f0f0f0;
   vertical-align: middle;
 }
 
