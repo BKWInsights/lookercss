@@ -47,7 +47,7 @@
 
 /* Hover-Effekt mit Hintergrundfarbe "lightyellow" */
 .hover {
-  background-color: lightyellow; /* Farbe in "lightyellow" umgewandelt */
+  background-color: lightgrey; /* Farbe in "lightyellow" umgewandelt */
 }
 
 /* Tabelle für Berichte */
