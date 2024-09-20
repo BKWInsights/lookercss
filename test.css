@@ -38,6 +38,7 @@
 /* Fettgedruckte Schrift für die Fokus-Elemente */
 .focus {
   font-weight: bold;
+  color: #333333; /* Dunkelgrau, näher an Schwarz */
 }
 
 /* Versteckte Elemente */
@@ -45,16 +46,16 @@
   display: none;
 }
 
-/* Hover-Effekt mit Hintergrundfarbe "lightgrey" */
+/* Hover-Effekt mit hellerem Grau */
 .hover {
-  background-color: lightgrey;
+  background-color: #eaeaea; /* Hellgrau für den Hover-Effekt */
 }
 
 /* Tabelle für Berichte */
 .reportTable {
   font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC,
     sans-serif;
-  color: dimgray;
+  color: #333333; /* Dunkelgrau für die Schrift, näher an Schwarz */
   border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
@@ -63,22 +64,17 @@
 /* Alternierende Farben nur für die Measures und die letzte Dimension */
 .reportTable tr:nth-child(even) td:last-child,
 .reportTable tr:nth-child(even) td.measure {
-  background-color: lightgrey; /* Alternierende Farbe für gerade Zeilen (letzte Dimension und Measures) */
+  background-color: #f9f9f9; /* Viel helleres Grau für die alternierende Zeilen */
 }
 
 .reportTable tr:nth-child(odd) td:last-child,
 .reportTable tr:nth-child(odd) td.measure {
-  background-color: white; /* Alternierende Farbe für ungerade Zeilen (letzte Dimension und Measures) */
+  background-color: white;
 }
 
-/* Hover-Effekt bleibt unverändert */
+/* Hover-Effekt bleibt im Grauton */
 .reportTable tr:hover td {
-  background-color: limegreen !important;
-}
-
-.reportTable td:hover::before,
-.reportTable th:hover {
-  background-color: red !important;
+  background-color: #eaeaea !important; /* Helles Grau für den Hover-Effekt */
 }
 
 /* Headerzelle für Spaltenüberschriften */
@@ -87,6 +83,7 @@ th.headerCell {
   padding: 5px;
   border-bottom: 1px solid lightgray;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
 /* Headerzelle für Dimensionen */
@@ -94,6 +91,7 @@ th.headerCell {
   background-color: white;
   border-right: 1px solid lightgray;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
 /* Headerzelle für Pivots */
@@ -101,32 +99,45 @@ th.headerCell {
   background-color: white;
   border-right: 1px solid lightgray;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
 /* Headerzelle für Messwerte */
 .headerCell.measure {
-  background-color: blanchedalmond;
+  background-color: white; /* Gleiche Hintergrundfarbe wie der Rest der Tabelle */
   border-left: 1px solid lightgray;
   vertical-align: middle;
+  text-align: center; /* Zentrierung der Measure-Beschreibung */
+  color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
 /* Headerzelle für berechnete Messwerte */
 .headerCell.measure.calculation {
-  background-color: honeydew;
+  background-color: white;
   border-left: 1px solid lightgray;
   vertical-align: middle;
+  text-align: center; /* Zentrierung der Measure-Beschreibung */
+  color: #333333; /* Dunkelgrau für die Header-Schrift */
+}
+
+/* Dünne dunkelgraue Linie zwischen pivotisierten Dimensionen */
+.reportTable th.pivot-value,
+.reportTable td.pivot-value {
+  border-right: 1px solid #333333; /* Dünne dunkelgraue Linie zwischen pivotierten Dimensionen */
 }
 
 /* Headerzelle für transponierte Dimensionen */
 .headerCell.transposed.dimension {
   background-color: white;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
 /* Hintergrundfarbe bei zusammengeführten transponierten Dimensionen */
 .headerCell.transposed.dimension.merged {
   background-color: white !important;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
 /* Zeilenzellen für Tabelleninhalte */
@@ -146,66 +157,49 @@ th.headerCell {
 .indexCell.transposed {
   font-weight: bold;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Hintergrundfarbe für transponierte Pivot-Indexzellen */
 .indexCell.transposed.pivot {
   background-color: white;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Hintergrundfarbe für transponierte Dimensions-Indexzellen */
 .indexCell.transposed.dimension {
   background-color: white;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Hintergrundfarbe für transponierte Messwerte */
 .indexCell.transposed.measure {
-  background-color: blanchedalmond;
+  background-color: #f9f9f9;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Hintergrundfarbe für transponierte Berechnungen */
 .indexCell.transposed.calculation {
-  background-color: honeydew;
+  background-color: #f9f9f9;
   vertical-align: middle;
-}
-
-/* Hintergrundfarbe für zusammengeführte transponierte Pivot-Indexzellen */
-.indexCell.transposed.pivot.merged {
-  background-color: white !important;
-  vertical-align: middle;
-}
-
-/* Hintergrundfarbe für zusammengeführte transponierte Dimensionen */
-.indexCell.transposed.dimension.merged {
-  background-color: white !important;
-  vertical-align: middle;
-}
-
-/* Hintergrundfarbe für zusammengeführte transponierte Messwerte */
-.indexCell.transposed.measure.merged {
-  background-color: blanchedalmond !important;
-  vertical-align: middle;
-}
-
-/* Hintergrundfarbe für zusammengeführte transponierte Berechnungen */
-.indexCell.transposed.calculation.merged {
-  background-color: honeydew !important;
-  vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Nicht-numerische Zellen linksbündig */
 .nonNumeric {
   text-align: left;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Numerische Zellen rechtsbündig */
 .numeric {
   text-align: right;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Negative Werte rot darstellen */
@@ -230,7 +224,7 @@ th.headerCell {
 .subtotal {
   font-style: italic;
   font-weight: bold;
-  background: lightgray;
+  background: #f9f9f9; /* Helleres Grau für Zwischensummen */
   vertical-align: middle;
 }
 
@@ -239,12 +233,13 @@ th.headerCell {
   border-top: 2px solid dimgray !important;
   font-weight: bold !important;
   vertical-align: middle;
+  color: #333333; /* Dunkelgrau für die Schrift */
 }
 
 /* Gesamtzeilen bei transponierten Tabellen */
 .total.transposed {
   border-top: 0px !important;
-  background: lightgray;
+  background: #f9f9f9;
   vertical-align: middle;
 }
 
