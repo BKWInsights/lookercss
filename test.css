@@ -17,7 +17,7 @@ body {
   font-family: 'Open Sans', Helvetica, Arial, 'Noto Sans TC', 'Noto Sans SC',
     sans-serif;
   color: #333333; /* Dunkelgrau für bessere Lesbarkeit */
-  line-height: 1.2; /* Optimierte Zeilenhöhe */
+  line-height: 1.1; /* Optimierte Zeilenhöhe */
 }
 
 /* Tooltip-Styling */
@@ -88,7 +88,7 @@ body {
 /* Headerzelle für Spaltenüberschriften */
 th.headerCell {
   background-color: #ffffff;
-  padding: 10px; /* Erhöhter Padding für bessere Lesbarkeit */
+  padding: 8px; /* Erhöhter Padding für bessere Lesbarkeit */
   border-bottom: 1px solid #cccccc;
   vertical-align: middle;
   color: inherit;
@@ -143,7 +143,7 @@ th.headerCell {
 /* Zeilenzellen für Tabelleninhalte */
 .rowCell {
   vertical-align: middle;
-  padding: 6px; /* Erhöhter Padding für bessere Lesbarkeit */
+  padding: 5px; /* Erhöhter Padding für bessere Lesbarkeit */
   border-bottom: 1px solid #cccccc;
 }
 
