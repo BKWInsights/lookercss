@@ -135,7 +135,7 @@ th.headerCell {
 /* Zeilenzellen für Tabelleninhalte */
 .rowCell {
   vertical-align: middle;
-  padding: 8px; /* Minimal erhöhtes Padding für die Zeilen */
+  padding: 6px; /* Minimal erhöhtes Padding für die Zeilen */
   border-bottom: 1px solid lightgray;
 }
 
