@@ -60,6 +60,15 @@
   table-layout: fixed;
 }
 
+/* Alternierende Zeilenfarben */
+.reportTable tr:nth-child(even) {
+  background-color: lightgrey; /* Farbe für gerade Zeilen */
+}
+
+.reportTable tr:nth-child(odd) {
+  background-color: white; /* Farbe für ungerade Zeilen */
+}
+
 /* Headerzelle für Spaltenüberschriften, gleiche Hintergrundfarbe wie Tabelle */
 th.headerCell {
   background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
