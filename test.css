@@ -58,7 +58,7 @@
   color: #333333; /* Dunkelgrau für die Schrift, näher an Schwarz */
   border-collapse: collapse;
   border-spacing: 3px;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 /* Alternierende Farben nur für die Measures und die letzte Dimension */
