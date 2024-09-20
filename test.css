@@ -1,10 +1,11 @@
-/* Define Open Sans as the primary font */
+/* Define Roboto as the primary font with fallback to Noto Sans family and other fonts */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Roboto', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 
+  'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
   font-weight: normal;
   font-style: normal;
-  src: url('https://static-a.lookercdn.com/fonts/vendor/opensans/opensans_regular/OpenSans-Regular-webfont-9bfa20540f.woff') format('woff'),
-    url('/fonts/vendor/opensans/opensans_regular/OpenSans-Regular-webfont-9bfa20540f.woff') format('woff');
+  src: url('https://static-a.lookercdn.com/fonts/vendor/roboto/roboto_regular/Roboto-Regular-webfont.woff') format('woff'),
+    url('/fonts/vendor/roboto/roboto_regular/Roboto-Regular-webfont.woff') format('woff');
 }
 
 /* Style for a tooltip element that shows information when hovering over data points */
@@ -21,14 +22,16 @@
   border-radius: 4px;
   box-shadow: 4px 4px 10px rgba(255, 0, 0, 0.4);
   pointer-events: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 
+    'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
   font-size: 12px;
   z-index: 2;
 }
 
 /* Table used inside tooltips for structured data display */
 .tooltipTable {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 
+    'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
   border-top: 5px solid magenta;     /* Magenta top border for tooltip table */
   border-bottom: 5px solid cyan;     /* Cyan bottom border for tooltip table */
   border-left: 5px solid orange;     /* Orange left border for tooltip table */
@@ -54,7 +57,8 @@
 
 /* Styles for a report table */
 .reportTable {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 
+    'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
   border-top: 50px solid pink;       /* Pink top border for report table */
   border-bottom: 5px solid lightblue;/* Light blue bottom border for report table */
   border-left: 5px solid brown;     /* Brown left border for report table */
