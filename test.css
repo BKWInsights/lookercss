@@ -70,17 +70,6 @@ table.reportTable th {
   vertical-align: middle;
 }
 
-/* Styling nur für die erste Headerzeile */
-table.reportTable th:nth-child(1) {
-  border-top: 5px solid blue; /* Anderer oberer Rahmen für die erste Zeile */
-  background-color: lightgray; /* Anderer Hintergrund für die erste Zeile */
-}
-
-/* Styling für alle Headerzellen in der ersten Zeile */
-table.reportTable tr:nth-child(1) th {
-  border-bottom: 2px solid black; /* Dünnerer Rahmen unten für die erste Zeile */
-}
-
 /* Different borders between pivoted years (e.g., 2024, 2025) */
 table.reportTable th.pivot-value {
   border-right: 2px solid black;  /* 2px thick border between pivot years */
