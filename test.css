@@ -4,7 +4,6 @@
   src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2')
     format('woff2');
 }
-
 /* Einbinden der Schriftart Noto Sans SC */
 @font-face {
   font-family: 'Noto Sans SC';
