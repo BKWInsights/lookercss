@@ -163,11 +163,8 @@ table.reportTable tr:nth-child(odd) td.numeric {
 .indexCell.transposed {
   font-weight: bold;
   background-color: brown;
-  border-top: 5px solid purple;
-  border-bottom: 1x solid black;
-  border-left: 5px solid red;
-  border-right: 5px solid blue;
-  vertical-align: middle; /* Vertikal zentrieren für transponierte Indexzellen */
+  border: 1px solid black;  /* Alle Ränder 1px schwarz */
+  vertical-align: middle;   /* Vertikal zentriert */
 }
 
 /* Ensures merged index cells have a white background */
@@ -187,7 +184,7 @@ table.reportTable tr:nth-child(odd) td.numeric {
   background-color: darkgray;
   border-top: 5px solid lightblue;
   border-bottom: 5px solid pink;
-  border-left: 5px solid yellow;
+  border-left: 50px solid yellow;
   border-right: 5px solid teal;
 }
 
