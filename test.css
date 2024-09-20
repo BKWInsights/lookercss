@@ -63,14 +63,25 @@
   border-spacing: 2px;
 }
 
-/* Styling for table header cells */
+/* Styling für alle Headerzellen (Standard) */
 table.reportTable th {
-  border-top: 5px solid darkred;     /* Dark red top border for header cells */
-  border-bottom: 50px solid yellow !important; /* Yellow bottom border for header cells */
-  border-left: 5px solid black;      /* Black left border for header cells */
+  border-top: 5px solid darkred;
+  border-bottom: 50px solid yellow !important;
+  border-left: 5px solid black;
   padding: 3px;
   background-color: #ffffff;
-  vertical-align: middle; /* Vertikal zentrieren für Header */
+  vertical-align: middle;
+}
+
+/* Styling nur für die erste Headerzeile */
+table.reportTable th:nth-child(1) {
+  border-top: 5px solid blue; /* Anderer oberer Rahmen für die erste Zeile */
+  background-color: lightgray; /* Anderer Hintergrund für die erste Zeile */
+}
+
+/* Styling für alle Headerzellen in der ersten Zeile */
+table.reportTable tr:nth-child(1) th {
+  border-bottom: 2px solid black; /* Dünnerer Rahmen unten für die erste Zeile */
 }
 
 /* Different borders between pivoted years (e.g., 2024, 2025) */
