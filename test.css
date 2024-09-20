@@ -84,7 +84,7 @@ table.reportTable th.pivot-value {
 
 /* Different borders between measures inside pivoted years */
 table.reportTable th.measure {
-  border-right: 1px solid black;  /* 1px thin border between measures */
+  border-right: 0.5px solid gray;  /* 0.5px thin gray border between measures */
 }
 
 table.reportTable td.pivot-value {
@@ -92,19 +92,21 @@ table.reportTable td.pivot-value {
 }
 
 table.reportTable td.measure {
-  border-right: 1px solid black;  /* 1px thin border between measures in data cells */
+  border-right: 0.5px solid gray;  /* 0.5px thin gray border between measures in data cells */
 }
 
 /* Vertikal zentrieren für Dimensionen */
 table.reportTable td.dimension {
   vertical-align: middle; /* Vertikal zentrieren für Dimensionen */
   padding: 15px; /* Optional: zusätzlicher Abstand */
+  border-right: 1px solid black; /* 1px black border between dimensions */
 }
 
 /* Vertikal zentrieren für Header-Dimensionen */
 table.reportTable th.dimension {
   vertical-align: middle; /* Vertikal zentrieren für Header-Dimensionen */
   padding: 15px; /* Optional: zusätzlicher Abstand */
+  border-right: 1px solid black; /* 1px black border between dimensions */
 }
 
 /* Styling for data cells inside the report table */
