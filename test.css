@@ -4,6 +4,7 @@
   src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2')
     format('woff2');
 }
+
 /* Einbinden der Schriftart Noto Sans SC */
 @font-face {
   font-family: 'Noto Sans SC';
@@ -119,7 +120,7 @@ th.headerCell {
   color: #333333; /* Dunkelgrau für die Header-Schrift */
 }
 
-/* Dünne dunkelgraue Linie zwischen pivotisierten Dimensionen (Header und Datenzellen) */
+/* Dünne dunkelgraue Linie zwischen pivotisierten Dimensionen */
 .reportTable th.pivot-value,
 .reportTable td.pivot-value {
   border-right: 1px solid #333333; /* Dünne dunkelgraue Linie */
@@ -183,6 +184,7 @@ th.headerCell {
   background-color: #f9f9f9;
   vertical-align: middle;
   color: #333333; /* Dunkelgrau für die Schrift */
+  text-align: center; /* Zentrierung für transponierte Measures */
 }
 
 /* Hintergrundfarbe für transponierte Berechnungen */
@@ -190,6 +192,7 @@ th.headerCell {
   background-color: #f9f9f9;
   vertical-align: middle;
   color: #333333; /* Dunkelgrau für die Schrift */
+  text-align: center; /* Zentrierung für transponierte Berechnungen */
 }
 
 /* Nicht-numerische Zellen linksbündig */
