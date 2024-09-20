@@ -65,45 +65,52 @@ th.headerCell {
   background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
   padding: 5px;
   border-bottom: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Headerzelle für Dimensionen */
 .headerCell.dimension {
   background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
   border-right: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Headerzelle für Pivots */
 .headerCell.pivot {
   background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
   border-right: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Headerzelle für Messwerte */
 .headerCell.measure {
   background-color: blanchedalmond; /* Farbe in "blanchedalmond" umgewandelt */
   border-left: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Headerzelle für berechnete Messwerte */
 .headerCell.measure.calculation {
   background-color: honeydew; /* Farbe in "honeydew" umgewandelt */
   border-left: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Headerzelle für transponierte Dimensionen */
 .headerCell.transposed.dimension {
   background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe bei zusammengeführten transponierten Dimensionen */
 .headerCell.transposed.dimension.merged {
   background-color: white !important; /* Farbe an Tabellenhintergrundfarbe angepasst */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Zeilenzellen für Tabelleninhalte */
 .rowCell {
-  vertical-align: super;
+  vertical-align: middle; /* Vertikale Zentrierung */
   padding-left: 5px;
   border-bottom: 1px solid lightgray; /* Farbe in "lightgray" umgewandelt */
 }
@@ -111,76 +118,91 @@ th.headerCell {
 /* Zeilenzellen bei zusammengeführten Zeilen */
 .rowCell.merged {
   background-color: white !important; /* Farbe in "white" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Transponierte Indexzellen fettgedruckt */
 .indexCell.transposed {
   font-weight: bold;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für transponierte Pivot-Indexzellen */
 .indexCell.transposed.pivot {
   background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für transponierte Dimensions-Indexzellen */
 .indexCell.transposed.dimension {
   background-color: white; /* Farbe an Tabellenhintergrundfarbe angepasst */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für transponierte Messwerte */
 .indexCell.transposed.measure {
   background-color: blanchedalmond; /* Farbe in "blanchedalmond" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für transponierte Berechnungen */
 .indexCell.transposed.calculation {
   background-color: honeydew; /* Farbe in "honeydew" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für zusammengeführte transponierte Pivot-Indexzellen */
 .indexCell.transposed.pivot.merged {
   background-color: white !important; /* Farbe an Tabellenhintergrundfarbe angepasst */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für zusammengeführte transponierte Dimensionen */
 .indexCell.transposed.dimension.merged {
   background-color: white !important; /* Farbe an Tabellenhintergrundfarbe angepasst */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für zusammengeführte transponierte Messwerte */
 .indexCell.transposed.measure.merged {
   background-color: blanchedalmond !important; /* Farbe in "blanchedalmond" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für zusammengeführte transponierte Berechnungen */
 .indexCell.transposed.calculation.merged {
   background-color: honeydew !important; /* Farbe in "honeydew" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Nicht-numerische Zellen linksbündig */
 .nonNumeric {
   text-align: left;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Numerische Zellen rechtsbündig */
 .numeric {
   text-align: right;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Negative Werte rot darstellen */
 .negative {
   color: red;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Schätzung in "darkgray" */
 .estimate {
   color: darkgray !important;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Einzeiliger Index mit größerem Padding */
 .singleIndex {
   padding-left: 15px !important;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Hintergrundfarbe für Zwischensummen */
@@ -188,22 +210,26 @@ th.headerCell {
   font-style: italic;
   font-weight: bold;
   background: lightgray; /* Farbe in "lightgray" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Gesamtzeilen fettgedruckt und mit dunkler Linie */
 .total {
   border-top: 2px solid dimgray !important; /* Farbe in "dimgray" umgewandelt */
   font-weight: bold !important;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Gesamtzeilen bei transponierten Tabellen */
 .total.transposed {
   border-top: 0px !important;
   background: lightgray; /* Farbe in "lightgray" umgewandelt */
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
 
 /* Stil für animierte Elemente */
 .rectElem.animated {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   margin: 4px;
+  vertical-align: middle; /* Vertikale Zentrierung */
 }
