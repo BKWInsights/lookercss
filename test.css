@@ -68,21 +68,37 @@ table.reportTable th {
   border-top: 5px solid darkred;     /* Dark red top border for header cells */
   border-bottom: 5px solid yellow !important; /* Yellow bottom border for header cells */
   border-left: 5px solid black;      /* Black left border for header cells */
-  border-right: 5px solid darkblue;  /* Dark blue right border for header cells */
   padding: 3px;
   background-color: #ffffff;
+}
+
+/* Different borders between pivoted years (e.g., 2024, 2025) */
+table.reportTable th.pivot-value {
+  border-right: 2px solid black;  /* 2px thick border between pivot years */
+}
+
+/* Different borders between measures inside pivoted years */
+table.reportTable th.measure {
+  border-right: 1px solid black;  /* 1px thin border between measures */
+}
+
+table.reportTable td.pivot-value {
+  border-right: 2px solid black;  /* 2px thick border between pivot years in data cells */
+}
+
+table.reportTable td.measure {
+  border-right: 1px solid black;  /* 1px thin border between measures in data cells */
 }
 
 /* Styling for data cells inside the report table */
 table.reportTable td {
   vertical-align: super;
   padding: 15px;
-  border-top: 1px dotted black;       /* Green top border for data cells */
-  border-top-style: dotted;
-  border-bottom: 0.5px solid red;      /* Red bottom border for data cells */
-  border-left:1px solid purple;     /* Purple left border for data cells */
-  border-right: 1px dotted grey;    /* Orange right border for data cells */
- border-collapse: separate;
+  border-top: 1px dotted black;
+  border-bottom: 0.5px solid red;
+  border-left: 1px solid purple;
+  border-right: 1px dotted grey;
+  border-collapse: separate;
 }
 
 /* Styling for elements when hovered over */
@@ -120,10 +136,10 @@ table.reportTable tr:nth-child(odd) td.numeric {
 
 /* Special class for header cells with specific styles */
 .headerCell {
-  border-top: 5px solid cyan;       /* Cyan top border for header cells */
-  border-bottom: 5px solid pink;    /* Pink bottom border for header cells */
-  border-left: 5px solid lightgreen;/* Light green left border for header cells */
-  border-right: 5px solid darkgray; /* Dark gray right border for header cells */
+  border-top: 5px solid cyan;
+  border-bottom: 5px solid pink;
+  border-left: 5px solid lightgreen;
+  border-right: 5px solid darkgray;
   font-weight: bold;
   padding: 3px;
   background-color: darkorange;
@@ -133,19 +149,19 @@ table.reportTable tr:nth-child(odd) td.numeric {
 .indexCell.transposed {
   font-weight: bold;
   background-color: brown;
-  border-top: 5px solid purple;      /* Purple top border for transposed index cells */
-  border-bottom: 5px solid yellow;   /* Yellow bottom border for transposed index cells */
-  border-left: 5px solid red;        /* Red left border for transposed index cells */
-  border-right: 5px solid blue;      /* Blue right border for transposed index cells */
+  border-top: 5px solid purple;
+  border-bottom: 5px solid yellow;
+  border-left: 5px solid red;
+  border-right: 5px solid blue;
 }
 
 /* Ensures merged index cells have a white background */
 .indexCell.transposed.merged {
   background-color: white !important;
-  border-top: 5px solid black;       /* Black top border for merged index cells */
-  border-bottom: 5px solid darkred;  /* Dark red bottom border for merged index cells */
-  border-left: 5px solid gray;       /* Gray left border for merged index cells */
-  border-right: 5px solid orange;    /* Orange right border for merged index cells */
+  border-top: 5px solid black;
+  border-bottom: 5px solid darkred;
+  border-left: 5px solid gray;
+  border-right: 5px solid orange;
 }
 
 /* Specific styling for row cells */
@@ -153,59 +169,56 @@ table.reportTable tr:nth-child(odd) td.numeric {
   vertical-align: super;
   padding-left: 5px;
   background-color: darkgray;
-  border-top: 5px solid lightblue;   /* Light blue top border for row cells */
-  border-bottom: 5px solid pink;     /* Pink bottom border for row cells */
-  border-left: 5px solid yellow;     /* Yellow left border for row cells */
-  border-right: 5px solid teal;      /* Teal right border for row cells */
+  border-top: 5px solid lightblue;
+  border-bottom: 5px solid pink;
+  border-left: 5px solid yellow;
+  border-right: 5px solid teal;
 }
 
 /* Left-align text for non-numeric values */
 .nonNumeric {
   text-align: left;
   background-color: #ffffff;
-  border-top: 5px solid orange;      /* Orange top border for non-numeric cells */
-  border-bottom: 5px solid green;    /* Green bottom border for non-numeric cells */
-  border-left: 5px solid blue;       /* Blue left border for non-numeric cells */
-  border-right: 5px solid purple;    /* Purple right border for non-numeric cells */
+  border-top: 5px solid orange;
+  border-bottom: 5px solid green;
+  border-left: 5px solid blue;
+  border-right: 5px solid purple;
 }
 
 /* Right-align text for numeric values */
 .numeric {
   text-align: right;
   background-color: darkred;
-  border-top: 5px solid darkgreen;   /* Dark green top border for numeric cells */
-  border-bottom: 5px solid magenta;  /* Magenta bottom border for numeric cells */
-  border-left: 5px solid lightgray;  /* Light gray left border for numeric cells */
-  border-right: 5px solid darkblue;  /* Dark blue right border for numeric cells */
+  border-top: 5px solid darkgreen;
+  border-bottom: 5px solid magenta;
+  border-left: 5px solid lightgray;
+  border-right: 5px solid darkblue;
 }
 
 /* Styles negative values in blue */
 .negative {
   color: blue;
-  border-top: 5px solid lime;        /* Lime top border for negative values */
-  border-bottom: 5px solid orange;   /* Orange bottom border for negative values */
-  border-left: 5px solid yellow;     /* Yellow left border for negative values */
-  border-right: 5px solid brown;     /* Brown right border for negative values */
+  border-top: 5px solid lime;
+  border-bottom: 5px solid orange;
+  border-left: 5px solid yellow;
+  border-right: 5px solid brown;
 }
 
 /* Specific styling for estimated values */
 .estimate {
   color: darkgray !important;
-  border-top: 5px solid cyan;        /* Cyan top border for estimated values */
-  border-bottom: 5px solid violet;   /* Violet bottom border for estimated values */
-  border-left: 5px solid red;        /* Red left border for estimated values */
-  border-right: 5px solid lightblue; /* Light blue right border for estimated values */
+  border-top: 5px solid cyan;
+  border-bottom: 5px solid violet;
+  border-left: 5px solid red;
+  border-right: 5px solid lightblue;
 }
 
 /* Adds extra left padding for single-index cells */
 .singleIndex {
   padding-left: 15px !important;
   background-color: blue;
-  border-top: 5px solid darkred;     /* Dark red top border for single-index cells */
-  border-bottom: 5px solid lightgreen;/* Light green bottom border for single-index cells */
-  border-left: 5px solid yellow;     /* Yellow left border for single-index cells */
-  border-right: 5px solid pink;      /* Pink right border for single-index cells */
+  border-top: 5px solid darkred;
+  border-bottom: 5px solid lightgreen;
+  border-left: 5px solid yellow;
+  border-right: 5px solid pink;
 }
-
-/* Styling for subtotal rows */
-.su
