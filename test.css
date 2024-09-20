@@ -65,9 +65,6 @@
 
 /* Styling für alle Headerzellen (Standard) */
 table.reportTable th {
-  border-top: 5px solid darkred;
-  border-bottom: 50px solid yellow !important;
-  border-left: 5px solid black;
   padding: 3px;
   background-color: #ffffff;
   vertical-align: middle;
